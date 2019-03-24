@@ -3500,6 +3500,9 @@
       <item itemvalue="Android App.mybehavior" />
     </list>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="f6fb9f14-81eb-4025-ac25-c3d4510ab173" name="Default" comment="" />

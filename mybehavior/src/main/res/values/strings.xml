@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MyBehavior</string>
+    <string name="behavior_sample_title" >e.user.mybehavior.behavior.SampleTitleBehavior</string>
+    <string name="behavior_main_header">e.user.mybehavior.behavior.MainHeaderBehavior</string>
+    <string name="behavior_xiami_title">e.user.mybehavior.behavior.MyTitleBehavior</string>
+    <string name="behavior_xiami_comment">e.user.mybehavior.behavior.MyCommentBehavior</string>
+</resources>

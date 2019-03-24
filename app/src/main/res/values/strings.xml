@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">RxJavaTest</string>
+    <string name="btn1">在非UI线程执行且不关注结果</string>
+    <string name="btn2">在非UI线程执行并关注结果</string>
+    <string name="btn3">在非UI线程执行但在UI线程关注结果</string>
+    <string name="btn4">变换返回值</string>
+    <string name="btn5">按顺序做某事且下一件事依赖上一件事的结果</string>
+    <string name="btn6">并发读取不同数据源，转换成同类型后，合并</string>
+    <string name="btn7">搜索频率限制</string>
+</resources>

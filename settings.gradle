@@ -1,1 +1,1 @@
-include ':app', ':mybehavior'
+include ':app', ':mybehavior', ':snackbarutils'

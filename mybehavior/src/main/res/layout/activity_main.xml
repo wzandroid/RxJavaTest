@@ -24,6 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:chipSpacing="5dp"
+        app:singleSelection="true"
         app:layout_constraintTop_toBottomOf="@id/btn1">
 
         <android.support.design.chip.Chip

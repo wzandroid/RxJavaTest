@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.design.button.MaterialButton;
 import android.support.design.card.MaterialCardView;
+import android.support.design.chip.Chip;
 import android.support.design.chip.ChipGroup;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btn1;
     private MaterialCardView cardView;
     private ChipGroup chipGroup;
+    private Chip chip1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,9 +32,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initUI() {
         btn1 = findViewById(R.id.btn1);
         cardView = findViewById(R.id.card_view);
+        chipGroup = findViewById(R.id.chip_group);
+        chip1 = findViewById(R.id.chip_1);
 
         btn1.setOnClickListener(this);
         cardView.setOnClickListener(this);
+        chip1.setOnClickListener(this);
+
     }
 
     @Override
@@ -43,6 +49,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.card_view:
                 startActivity(new Intent(this,BehaviorTest2Activity.class));
+                break;
+            case R.id.chip_1:
+                startActivity(new Intent(this,SlideRecyclerViewActivity.class));
                 break;
         }
     }

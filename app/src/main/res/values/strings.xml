@@ -7,4 +7,5 @@
     <string name="btn5">按顺序做某事且下一件事依赖上一件事的结果</string>
     <string name="btn6">并发读取不同数据源，转换成同类型后，合并</string>
     <string name="btn7">搜索频率限制</string>
+    <string name="store_draft_save">这个是内容提示文字</string>
 </resources>

@@ -1,5 +1,6 @@
 package e.user.rxjavatest;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -39,6 +40,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn5).setOnClickListener(this);
         findViewById(R.id.btn6).setOnClickListener(this);
         findViewById(R.id.btn7).setOnClickListener(this);
+        findViewById(R.id.btn8).setOnClickListener(this);
     }
 
     //在非UI线程执行，不关注结果
@@ -234,6 +236,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn7:
                 rxJavaTest7();
+                break;
+            case R.id.btn8:
+                startActivity(new Intent(MainActivity.this,RecyclerViewPageActivity.class));
                 break;
         }
     }

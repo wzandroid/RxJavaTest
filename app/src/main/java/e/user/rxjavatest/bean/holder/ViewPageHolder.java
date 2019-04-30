@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
 import android.view.View;
 
@@ -45,7 +46,6 @@ public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
         viewPager.setAdapter(statePagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
         displayHeight = getDisplayHeight(activity);
-
     }
 
     @Override
@@ -59,6 +59,10 @@ public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
             }
             statePagerAdapter.notifyDataSetChanged();
         }
+    }
+
+    public RecyclerView getScrollView(){
+        return ((PageFragment)fragments.get(viewPager.getCurrentItem())).getRecyclerView();
     }
 
     private int getDisplayHeight(FragmentActivity activity){

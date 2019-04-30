@@ -20,6 +20,7 @@ public class PageRecyclerHolder extends BaseMultiAdapter.BaseHolderView {
         RecyclerView recyclerView = itemView.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(itemView.getContext(),LinearLayout.VERTICAL,false));
         dataAdapter = new DataAdapter();
+        recyclerView.setNestedScrollingEnabled(false);
         recyclerView.setAdapter(dataAdapter);
     }
 

@@ -22,6 +22,7 @@ public class RecyclerHolder extends BaseMultiAdapter.BaseHolderView {
         recyclerView.setLayoutManager(new LinearLayoutManager(itemView.getContext(),LinearLayout.HORIZONTAL,false));
         pageAdapter = new PageRecyclerAdapter();
         recyclerView.setAdapter(pageAdapter);
+        recyclerView.setNestedScrollingEnabled(false);
         PagerSnapHelper snapHelper = new PagerSnapHelper();
         snapHelper.attachToRecyclerView(recyclerView);
     }

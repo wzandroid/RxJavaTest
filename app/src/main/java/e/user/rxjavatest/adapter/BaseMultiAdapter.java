@@ -27,7 +27,6 @@ public abstract class BaseMultiAdapter<T extends MultiType,H extends BaseMultiAd
 
     @Override
     public int getItemViewType(int position) {
-        Log.d("TAG","position = "+position+",type = " +getDataList().get(position).getMultiType());
         return getDataList().get(position).getMultiType();
     }
 

@@ -7,12 +7,14 @@ import android.support.annotation.Nullable;
 import android.support.v4.view.NestedScrollingParent2;
 import android.support.v4.view.NestedScrollingParentHelper;
 import android.support.v4.view.ViewCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.LinearLayout;
 
 import e.user.rxjavatest.adapter.MultiAdapter;
 import e.user.rxjavatest.bean.holder.ViewPageHolder;
@@ -26,14 +28,14 @@ public class MyRecyclerView extends RecyclerView implements NestedScrollingParen
         mParentHelper = new NestedScrollingParentHelper(this);
     }
 
-
-
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         ViewHolder lastView = getLastViewHolder();
-        if(lastView != null && isTouchPointInView(((ViewPageHolder)lastView).getScrollView(),
-                (int)ev.getRawX(),(int)ev.getRawY())){
-            return false;
+        if(lastView != null ){
+            if(isTouchPointInView(((ViewPageHolder)lastView).getScrollView(), (int)ev.getRawX(),(int)ev.getRawY())){
+                //tabLayout区域事件不拦截滑动区域事件不拦截
+                return false;
+            }else return isScrollTop(((ViewPageHolder)lastView).getScrollView());
         }else
             return super.onInterceptTouchEvent(ev);
     }
@@ -80,7 +82,6 @@ public class MyRecyclerView extends RecyclerView implements NestedScrollingParen
             int canScrollY = lastHolder.itemView.getTop();
             if(canScrollY>0){
                 //底部列表没有全部显示出来
-
                 scrollBy(0,dy);
                 consumed[1]= dy;
             }
@@ -98,6 +99,20 @@ public class MyRecyclerView extends RecyclerView implements NestedScrollingParen
             return holder.getItemViewType() == MultiAdapter.PAGE_TYPE? holder:null;
         }
         return null;
+    }
+
+    private boolean isScrollTop(RecyclerView target){
+        if(target == null)return true;
+        LinearLayoutManager manager = (LinearLayoutManager) target.getLayoutManager();
+        return manager!=null && manager.findFirstCompletelyVisibleItemPosition() == 0;
+    }
+
+    //当 View 有一点点不可见时立即返回false!
+    public static boolean isVisibleLocal(View target){
+        if(target == null) return false;
+        Rect rect =new Rect();
+        target.getLocalVisibleRect(rect);
+        return rect.top==0;
     }
 
     private boolean isTouchPointInView(View view, int x, int y) {

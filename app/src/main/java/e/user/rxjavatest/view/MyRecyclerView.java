@@ -17,9 +17,11 @@ import android.view.View;
 import android.widget.LinearLayout;
 
 import e.user.rxjavatest.adapter.MultiAdapter;
+import e.user.rxjavatest.bean.holder.RecyclerHolder;
 import e.user.rxjavatest.bean.holder.ViewPageHolder;
 
 public class MyRecyclerView extends RecyclerView /*implements NestedScrollingParent2*/ {
+    private static final int LAST_TYPE = MultiAdapter.SCROLL_TYPE;
 
 //    private NestedScrollingParentHelper mParentHelper;
 
@@ -32,10 +34,10 @@ public class MyRecyclerView extends RecyclerView /*implements NestedScrollingPar
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         ViewHolder lastView = getLastViewHolder();
         if(lastView != null ){
-            if(isTouchPointInView(((ViewPageHolder)lastView).getScrollView(), (int)ev.getRawX(),(int)ev.getRawY())){
+            if(isTouchPointInView(((RecyclerHolder)lastView).getScrollView(), (int)ev.getRawX(),(int)ev.getRawY())){
                 //tabLayout区域事件不拦截滑动区域事件不拦截
                 return false;
-            }else return isScrollTop(((ViewPageHolder)lastView).getScrollView());
+            }else return isScrollTop(((RecyclerHolder)lastView).getScrollView());
         }else
             return super.onInterceptTouchEvent(ev);
     }
@@ -96,7 +98,7 @@ public class MyRecyclerView extends RecyclerView /*implements NestedScrollingPar
             int posLast = manager.findLastVisibleItemPosition();
             int posStart = manager.findFirstVisibleItemPosition();
             ViewHolder holder = getChildViewHolder(getChildAt(posLast-posStart));
-            return holder.getItemViewType() == MultiAdapter.PAGE_TYPE? holder:null;
+            return holder.getItemViewType() == LAST_TYPE? holder:null;
         }
         return null;
     }

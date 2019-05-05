@@ -13,12 +13,15 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import e.user.rxjavatest.R;
+import e.user.rxjavatest.bean.holder.PageRecyclerHolder;
+import e.user.rxjavatest.bean.holder.RecyclerHolder;
 import e.user.rxjavatest.bean.holder.ViewPageHolder;
 
 public class MyParentView extends RelativeLayout implements NestedScrollingParent2 {
     private NestedScrollingParentHelper parentHelper;
     private MyRecyclerView recyclerView;
     private NestedScrollView scrollView;
+    private int lastPreDy;
 
     public MyParentView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -59,7 +62,7 @@ public class MyParentView extends RelativeLayout implements NestedScrollingParen
             if(target instanceof MyRecyclerView){
                 Log.d("TAG","MyRecycler==>parent==>onNestedScroll==>dyConsumed="+dyConsumed+",dyUnconsumed="+dyUnconsumed);
                 //如果外层有未消耗的滑动距离，那么交给内层recyclerView来滑动
-                ((ViewPageHolder)recyclerView.getLastViewHolder()).getScrollView().scrollBy(0,dyUnconsumed);
+                ((RecyclerHolder)recyclerView.getLastViewHolder()).getScrollView().scrollBy(0,dyUnconsumed);
             }else{
                 Log.d("TAG","Recycler==>parent==>onNestedScroll==>dyConsumed="+dyConsumed+",dyUnconsumed="+dyUnconsumed);
                 recyclerView.scrollBy(0,dyUnconsumed);
@@ -74,6 +77,10 @@ public class MyParentView extends RelativeLayout implements NestedScrollingParen
 
         }else{
             if(recyclerView.getLastViewHolder() != null ){
+                if(lastPreDy==0) lastPreDy = dy;
+                if((lastPreDy<0 && dy>0 )|| (lastPreDy>0 && dy<0)){
+                    consumed[1] = dy;
+                } else lastPreDy = dy;
                 int canScrollY = recyclerView.getLastViewHolder().itemView.getTop();
                 Log.d("TAG","parent==>onNestedPreScroll==>canScrollY="+canScrollY+",dy="+dy+",type = "+type);
                 if(canScrollY>0){

@@ -14,6 +14,11 @@ import e.user.rxjavatest.interfaces.MultiType;
 
 public abstract class BaseMultiAdapter<T extends MultiType,H extends BaseMultiAdapter.BaseHolderView> extends RecyclerView.Adapter<H> {
     private List<T> dataList = new ArrayList<>();
+    protected ItemClickCallback itemClickCallback;
+
+    public void setItemClickCallback(ItemClickCallback itemClickCallback){
+        this.itemClickCallback = itemClickCallback;
+    }
 
     protected abstract int getHolderRes(int type);
 
@@ -60,8 +65,16 @@ public abstract class BaseMultiAdapter<T extends MultiType,H extends BaseMultiAd
             super(itemView);
         }
 
+        public BaseHolderView(@NonNull View itemView,ItemClickCallback callback) {
+            super(itemView);
+        }
+
         protected void bindData(MultiType bean){
 
         }
+    }
+
+    public interface ItemClickCallback{
+        void itemClick(int position);
     }
 }

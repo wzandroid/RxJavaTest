@@ -25,7 +25,6 @@ public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
     private TabLayout tabLayout;
     private List<Fragment> fragments = new ArrayList<>();
     private FragmentStatePagerAdapter statePagerAdapter;
-    private int displayHeight;
 
     public ViewPageHolder(@NonNull View itemView, FragmentActivity activity) {
         super(itemView);
@@ -45,7 +44,6 @@ public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
         };
         viewPager.setAdapter(statePagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
-        displayHeight = getDisplayHeight(activity);
     }
 
     @Override
@@ -63,20 +61,5 @@ public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
 
     public RecyclerView getScrollView(){
         return ((PageFragment)fragments.get(viewPager.getCurrentItem())).getRecyclerView();
-    }
-
-    private int getDisplayHeight(FragmentActivity activity){
-        //状态栏高度
-        int statusBarHeight = 0;
-        int resourceId = activity.getResources().getIdentifier("status_bar_height", "dimen",
-                "android");
-        if (resourceId > 0) {
-            statusBarHeight =activity.getResources().getDimensionPixelSize(resourceId);
-        }
-        //屏幕高度
-        DisplayMetrics dm = activity.getApplicationContext().getResources().getDisplayMetrics();
-        final float scale = dm.density;
-        int i = (int) (54 * scale + 0.5f);
-        return dm.heightPixels-statusBarHeight-i;
     }
 }

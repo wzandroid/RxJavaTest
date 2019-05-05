@@ -17,7 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecyclerViewPageActivity" />
+        <activity android:name=".RecyclerViewPageActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

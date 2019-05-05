@@ -19,13 +19,13 @@ import android.widget.LinearLayout;
 import e.user.rxjavatest.adapter.MultiAdapter;
 import e.user.rxjavatest.bean.holder.ViewPageHolder;
 
-public class MyRecyclerView extends RecyclerView implements NestedScrollingParent2 {
+public class MyRecyclerView extends RecyclerView /*implements NestedScrollingParent2*/ {
 
-    private NestedScrollingParentHelper mParentHelper;
+//    private NestedScrollingParentHelper mParentHelper;
 
     public MyRecyclerView(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        mParentHelper = new NestedScrollingParentHelper(this);
+//        mParentHelper = new NestedScrollingParentHelper(this);
     }
 
     @Override
@@ -40,57 +40,57 @@ public class MyRecyclerView extends RecyclerView implements NestedScrollingParen
             return super.onInterceptTouchEvent(ev);
     }
 
-    @Override
-    public boolean onStartNestedScroll(@NonNull View child, @NonNull View target, int axes, int type) {
-        //如果是竖直方向滑动，就启动嵌套滑动
-        return (axes & ViewCompat.SCROLL_AXIS_VERTICAL) != 0;
-    }
-
-    @Override
-    public void onNestedScrollAccepted(@NonNull View view, @NonNull View target, int axes, int type) {
-        Log.d("TAG","onNestedScrollAccepted");
-        mParentHelper.onNestedScrollAccepted(view,target,axes,type);
-    }
-
-    @Override
-    public int getNestedScrollAxes() {
-        return mParentHelper.getNestedScrollAxes();
-    }
-
-    @Override
-    public void onStopNestedScroll(@NonNull View target, int type) {
-        Log.d("TAG","onStopNestedScroll");
-        mParentHelper.onStopNestedScroll(target,type);
-    }
-
-    @Override
-    public void onNestedScroll(@NonNull View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type) {
-        //这里的Consumed代表NestScrollView消耗的距离， Unconsumed代表NestScrollView未消耗的距离
-        //imageRight根据NestScrollView滑动的距离而进行相应的滑动。
-        Log.d("TAG","onNestedScroll==>dyConsumed="+dyConsumed+",dyUnconsumed="+dyUnconsumed);
-        scrollBy(0,dyUnconsumed);
-    }
-
-
-
-    @Override
-    public void onNestedPreScroll(@NonNull View target, int dx, int dy, @Nullable int[] consumed, int type) {
-        Log.d("TAG","onNestedPreScroll ==》dy="+dy);
-        ViewHolder lastHolder = getLastViewHolder();
-        if(lastHolder != null && lastHolder.getItemViewType() == MultiAdapter.PAGE_TYPE){
-            //底部列表可见
-            int canScrollY = lastHolder.itemView.getTop();
-            if(canScrollY>0){
-                //底部列表没有全部显示出来
-                scrollBy(0,dy);
-                consumed[1]= dy;
-            }
-        }
-//        this.dispatchNestedPreScroll(dx, dy, consumed, (int[])null, type);
-    }
+//    @Override
+//    public boolean onStartNestedScroll(@NonNull View child, @NonNull View target, int axes, int type) {
+//        //如果是竖直方向滑动，就启动嵌套滑动
+//        return (axes & ViewCompat.SCROLL_AXIS_VERTICAL) != 0;
+//    }
+//
+//    @Override
+//    public void onNestedScrollAccepted(@NonNull View view, @NonNull View target, int axes, int type) {
+//        Log.d("TAG","onNestedScrollAccepted");
+//        mParentHelper.onNestedScrollAccepted(view,target,axes,type);
+//    }
+//
+//    @Override
+//    public int getNestedScrollAxes() {
+//        return mParentHelper.getNestedScrollAxes();
+//    }
+//
+//    @Override
+//    public void onStopNestedScroll(@NonNull View target, int type) {
+//        Log.d("TAG","onStopNestedScroll");
+//        mParentHelper.onStopNestedScroll(target,type);
+//    }
+//
+//    @Override
+//    public void onNestedScroll(@NonNull View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type) {
+//        //这里的Consumed代表NestScrollView消耗的距离， Unconsumed代表NestScrollView未消耗的距离
+//        //imageRight根据NestScrollView滑动的距离而进行相应的滑动。
+//        Log.d("TAG","onNestedScroll==>dyConsumed="+dyConsumed+",dyUnconsumed="+dyUnconsumed);
+//        scrollBy(0,dyUnconsumed);
+//    }
+//
+//
+//
+//    @Override
+//    public void onNestedPreScroll(@NonNull View target, int dx, int dy, @Nullable int[] consumed, int type) {
+//        Log.d("TAG","onNestedPreScroll ==》dy="+dy);
+//        ViewHolder lastHolder = getLastViewHolder();
+//        if(lastHolder != null && lastHolder.getItemViewType() == MultiAdapter.PAGE_TYPE){
+//            //底部列表可见
+//            int canScrollY = lastHolder.itemView.getTop();
+//            if(canScrollY>0){
+//                //底部列表没有全部显示出来
+//                scrollBy(0,dy);
+//                consumed[1]= dy;
+//            }
+//        }
+////        this.dispatchNestedPreScroll(dx, dy, consumed, (int[])null, type);
+//    }
 
     //获取列表最后一个可见的ViewHolder
-    private ViewHolder getLastViewHolder(){
+    public ViewHolder getLastViewHolder(){
         LinearLayoutManager manager = (LinearLayoutManager) getLayoutManager();
         if(manager!=null){
             int posLast = manager.findLastVisibleItemPosition();
@@ -107,14 +107,6 @@ public class MyRecyclerView extends RecyclerView implements NestedScrollingParen
         return manager!=null && manager.findFirstCompletelyVisibleItemPosition() == 0;
     }
 
-    //当 View 有一点点不可见时立即返回false!
-    public static boolean isVisibleLocal(View target){
-        if(target == null) return false;
-        Rect rect =new Rect();
-        target.getLocalVisibleRect(rect);
-        return rect.top==0;
-    }
-
     private boolean isTouchPointInView(View view, int x, int y) {
         if (view == null) {
             return false;
@@ -125,7 +117,6 @@ public class MyRecyclerView extends RecyclerView implements NestedScrollingParen
         int top = location[1];
         int right = left + view.getMeasuredWidth();
         int bottom = top + view.getMeasuredHeight();
-        //view.isClickable() &&
         if (y >= top && y <= bottom && x >= left
                 && x <= right) {
             return true;

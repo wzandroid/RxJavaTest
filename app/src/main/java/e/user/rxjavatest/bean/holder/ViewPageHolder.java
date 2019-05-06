@@ -1,6 +1,7 @@
 package e.user.rxjavatest.bean.holder;
 
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -22,6 +23,7 @@ public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
     private ViewPager viewPager;
     private TabLayout tabLayout;
     private List<Fragment> fragments = new ArrayList<>();
+    private List<String> nameList = new ArrayList<>();
     private FragmentStatePagerAdapter statePagerAdapter;
 
     public ViewPageHolder(@NonNull View itemView, FragmentActivity activity) {
@@ -39,6 +41,11 @@ public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
                 return fragments.size();
             }
 
+            @Nullable
+            @Override
+            public CharSequence getPageTitle(int position) {
+                return nameList.get(position);
+            }
         };
         viewPager.setAdapter(statePagerAdapter);
         tabLayout.setupWithViewPager(viewPager);
@@ -51,7 +58,8 @@ public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
             fragments.clear();
             PageBean pageBean = (PageBean)bean;
             for(int i=0;i<pageBean.getTitleList().size();i++){
-                fragments.add(PageFragment.getInstance(pageBean.getTitleList().get(i)));
+                nameList.add(pageBean.getTitleList().get(i));
+                fragments.add(PageFragment.getInstance(nameList.get(i)));
             }
             statePagerAdapter.notifyDataSetChanged();
         }
@@ -59,5 +67,16 @@ public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
 
     public RecyclerView getScrollView(){
         return ((PageFragment)fragments.get(viewPager.getCurrentItem())).getRecyclerView();
+    }
+
+    public void allScrollTop(){
+        PageFragment pageFragment;
+        for(int i=0;i < fragments.size();i++){
+            if(i != viewPager.getCurrentItem()){
+                pageFragment = (PageFragment)fragments.get(i);
+                if(pageFragment != null && pageFragment.getRecyclerView() != null)
+                    pageFragment.getRecyclerView().scrollToPosition(0);
+            }
+        }
     }
 }

@@ -11,8 +11,8 @@ public class PageBean implements MultiType {
     private List<String> titleList;
 
     public PageBean(){
-        for(int i=0;i<5;i++){
-            getTitleList().add("测试分类"+i);
+        for(int i=0;i<8;i++){
+            getTitleList().add("分类"+i);
         }
     }
 

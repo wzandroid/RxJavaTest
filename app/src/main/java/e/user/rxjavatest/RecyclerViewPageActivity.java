@@ -33,9 +33,9 @@ public class RecyclerViewPageActivity extends AppCompatActivity {
     private void initData() {
         List<MultiType> tmpList = new ArrayList<>();
         for(int i=0;i<5;i++){
-            if(i==4) tmpList.add(new RecyclerBean());
+//            if(i==4) tmpList.add(new RecyclerBean());
 //            else
-//                if(i==4) tmpList.add(new PageBean());
+                if(i==4) tmpList.add(new PageBean());
             else tmpList.add(new TopBean("Test "+i));
         }
         multiAdapter.setDataList(tmpList);

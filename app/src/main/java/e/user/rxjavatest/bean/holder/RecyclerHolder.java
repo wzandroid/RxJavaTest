@@ -35,6 +35,7 @@ public class RecyclerHolder extends BaseMultiAdapter.BaseHolderView {
         recyclerView.setAdapter(pageAdapter);
         PagerSnapHelper snapHelper = new PagerSnapHelper();
         snapHelper.attachToRecyclerView(recyclerView);
+        recyclerView.setNestedScrollingEnabled(false);
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
             public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {

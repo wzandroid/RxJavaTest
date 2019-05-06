@@ -57,7 +57,7 @@ public class PageFragment extends Fragment {
 
     private void initData(){
         List<DataBean> tmpList = new ArrayList<>();
-        for (int i=0;i<20;i++){
+        for (int i=0;i<40;i++){
             tmpList.add(new DataBean("商品"+i));
         }
         dataAdapter.setDataList(tmpList);

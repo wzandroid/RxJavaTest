@@ -11,7 +11,7 @@ public class RecyclerBean implements MultiType {
 
     public RecyclerBean(){
         for(int i=0;i<5;i++){
-            getDataList().add(new PageRecyclerBean());
+            getDataList().add(new PageRecyclerBean(i+"分类"));
         }
     }
 

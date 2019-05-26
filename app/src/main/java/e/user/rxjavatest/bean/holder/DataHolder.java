@@ -3,6 +3,7 @@ package e.user.rxjavatest.bean.holder;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import e.user.rxjavatest.R;
 import e.user.rxjavatest.adapter.BaseMultiAdapter;
@@ -15,6 +16,12 @@ public class DataHolder extends BaseMultiAdapter.BaseHolderView {
     public DataHolder(@NonNull View itemView) {
         super(itemView);
         nameTv = itemView.findViewById(R.id.name_tv);
+        nameTv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(itemView.getContext(),"点击了商品",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override

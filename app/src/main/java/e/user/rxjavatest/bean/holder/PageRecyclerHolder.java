@@ -1,6 +1,7 @@
 package e.user.rxjavatest.bean.holder;
 
 import android.support.annotation.NonNull;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -14,13 +15,13 @@ import e.user.rxjavatest.interfaces.MultiType;
 
 public class PageRecyclerHolder extends BaseMultiAdapter.BaseHolderView {
     private DataAdapter dataAdapter;
+    public RecyclerView recyclerView;
 
     public PageRecyclerHolder(@NonNull View itemView) {
         super(itemView);
-        RecyclerView recyclerView = itemView.findViewById(R.id.recycler_view);
-        recyclerView.setLayoutManager(new LinearLayoutManager(itemView.getContext(),LinearLayout.VERTICAL,false));
+        recyclerView = itemView.findViewById(R.id.recycler_view);
+        recyclerView.setLayoutManager(new GridLayoutManager(itemView.getContext(),2));
         dataAdapter = new DataAdapter();
-        recyclerView.setNestedScrollingEnabled(false);
         recyclerView.setAdapter(dataAdapter);
     }
 

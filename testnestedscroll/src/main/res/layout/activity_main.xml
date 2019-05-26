@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <com.example.testnestedscroll.view.ParentView
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/top_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/tab_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="60dp"
-            android:background="#000"
-            android:layout_alignParentRight="true"/>
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/bottom_recycler"
-            android:layout_below="@id/recycler_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"/>
-    </com.example.testnestedscroll.view.ParentView>
+            android:layout_height="400dp"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

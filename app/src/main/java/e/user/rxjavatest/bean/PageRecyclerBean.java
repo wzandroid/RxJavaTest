@@ -7,10 +7,13 @@ import e.user.rxjavatest.interfaces.MultiType;
 
 public class PageRecyclerBean implements MultiType {
     private List<DataBean> dataList;
+    public String typeName;
+    public boolean select;
 
-    public PageRecyclerBean(){
+    public PageRecyclerBean(String type){
+        typeName = type;
         for(int i=0;i<20;i++){
-            getDataList().add(new DataBean("商品名称"+i));
+            getDataList().add(new DataBean(typeName+i));
         }
 
     }

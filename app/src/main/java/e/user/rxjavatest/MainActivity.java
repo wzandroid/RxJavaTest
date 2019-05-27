@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn6).setOnClickListener(this);
         findViewById(R.id.btn7).setOnClickListener(this);
         findViewById(R.id.btn8).setOnClickListener(this);
+        findViewById(R.id.btn9).setOnClickListener(this);
     }
 
     //在非UI线程执行，不关注结果
@@ -239,6 +240,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn8:
                 startActivity(new Intent(MainActivity.this,RecyclerViewPageActivity.class));
+                break;
+            case R.id.btn9:
+                startActivity(new Intent(MainActivity.this,DetailAnimActivity.class));
                 break;
         }
     }

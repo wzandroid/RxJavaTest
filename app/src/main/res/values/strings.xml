@@ -9,4 +9,5 @@
     <string name="btn7">搜索频率限制</string>
     <string name="store_draft_save">这个是内容提示文字</string>
     <string name="btn8">跳转</string>
+    <string name="btn9">详情动效</string>
 </resources>

@@ -19,6 +19,7 @@
         </activity>
         <activity android:name=".RecyclerViewPageActivity"
             android:screenOrientation="portrait"/>
+        <activity android:name=".DetailAnimActivity" />
     </application>
 
 </manifest>

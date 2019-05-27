@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="dp_49">49dp</dimen>
+    <dimen name="size_256dp">256dp</dimen>
 </resources>

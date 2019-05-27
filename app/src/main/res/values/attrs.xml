@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HomePageTabLayout">
+        <attr name="hptv_indicator_width" format="dimension" />
+        <attr name="hptv_indicator_height" format="dimension" />
+        <attr name="hptv_indicator_color" format="color" />
+        <attr name="hptv_indicator_corner_radius" format="dimension" />
+        <attr name="hptv_indicator_margin_top" format="dimension" />
+        <attr name="hptv_indicator_margin_bottom" format="dimension" />
+        <attr name="hptv_indicator_margin_left" format="dimension" />
+        <attr name="hptv_indicator_margin_right" format="dimension" />
+        <attr name="hptv_text_color" format="color" />
+        <attr name="hptv_text_normal_size" format="dimension" />
+        <attr name="hptv_text_selected_size" format="dimension" />
+        <attr name="hptv_text_bold" format="boolean" />
+        <attr name="hptv_image_scale" format="float" />
+        <attr name="hptv_animator_duration" format="integer" />
+    </declare-styleable>
+</resources>

@@ -1,6 +1,5 @@
 package e.user.rxjavatest.adapter;
 
-import android.content.ClipData;
 import android.support.annotation.NonNull;
 import android.view.View;
 import android.widget.TextView;

@@ -6,6 +6,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import com.scwang.smartrefresh.layout.SmartRefreshLayout;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +19,7 @@ import e.user.rxjavatest.interfaces.MultiType;
 
 public class RecyclerViewPageActivity extends AppCompatActivity {
     private MultiAdapter multiAdapter;
+    private SmartRefreshLayout refreshLayout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -24,6 +27,9 @@ public class RecyclerViewPageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recycler);
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
+        refreshLayout = findViewById(R.id.refresh_layout);
+
+        refreshLayout.setEnableLoadMore(false);
         recyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
         multiAdapter = new MultiAdapter(this);
         recyclerView.setAdapter(multiAdapter);

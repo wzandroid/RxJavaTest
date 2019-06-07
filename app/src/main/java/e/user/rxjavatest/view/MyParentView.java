@@ -55,23 +55,35 @@ public class MyParentView extends RelativeLayout implements NestedScrollingParen
     @Override
     public void onStopNestedScroll(@NonNull View target, int type) {
         getParentHelper().onStopNestedScroll(target,type);
+        if(target instanceof MyRecyclerView){
+            ViewPageHolder holder = (ViewPageHolder) recyclerView.getLastViewHolder();
+            if(holder!=null) getParentHelper().onStopNestedScroll(holder.getScrollView());
+        }else{
+            getParentHelper().onStopNestedScroll(recyclerView);
+        }
     }
 
     @Override
     public void onNestedScroll(@NonNull View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type) {
-        Log.d("TAG","parent==>onNestedScroll==>type="+type);
+        Log.d("TAG","parent==>onNestedScroll==>type="+type+",dyConsumed="+dyConsumed+",dyUnconsumed="+dyUnconsumed);
         ViewPageHolder holder = (ViewPageHolder) recyclerView.getLastViewHolder();
-        if(dyUnconsumed != 0 && holder != null){
-            if(target instanceof MyRecyclerView){
-                //如果外层有未消耗的滑动距离，那么交给内层recyclerView来滑动
-                holder.getScrollView().scrollBy(0,dyUnconsumed);
-            }else if(target instanceof RecyclerView){
-                recyclerView.scrollBy(0,dyUnconsumed);
-                if(holder != null){
-                    holder.allScrollTop();
+        if(holder != null){
+            holder.changeTab(recyclerView.canScrollVertically(1));
+            if(dyUnconsumed != 0){
+                if(target instanceof MyRecyclerView){
+                    //如果外层有未消耗的滑动距离，那么交给内层recyclerView来滑动
+                    holder.getScrollView().scrollBy(0,dyUnconsumed);
+                    return;
+                }
+                if(target instanceof RecyclerView){
+                    recyclerView.scrollBy(0,dyUnconsumed);
+                    if(holder != null){
+                        holder.allScrollTop();
+                    }
                 }
             }
         }
+
     }
 
     @Override

@@ -3,14 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/title_tv"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="我是标题"
-        android:background="#FFFFFF"/>
-
     <e.user.rxjavatest.view.NestedScrollingLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -18,9 +10,9 @@
         <ImageView
             android:id="@+id/image_view"
             android:layout_width="match_parent"
-            android:layout_height="256dp"
+            android:layout_height="@dimen/size_256dp"
+            android:layout_marginTop="50dp"
             android:background="@mipmap/head_test"/>
-
 
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/nested_view"
@@ -28,7 +20,7 @@
             android:layout_height="match_parent"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
-            android:layout_alignParentBottom="true">
+            android:layout_marginTop="50dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -39,125 +31,143 @@
                 <TextView
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
-                android:text="这个是测试数据啊"
+                android:text="这个是测试数据啊1"
                 android:gravity="center"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊2"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊3"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊4"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊5"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊6"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊7"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊8"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊9"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊10"
                     android:gravity="center"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊11"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊12"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊13"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊14"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊15"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊16"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊17"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊18"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊19"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊20"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊21"
                     android:gravity="center"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
-                    android:text="这个是测试数据啊"
+                    android:text="这个是测试数据啊22"
                     android:gravity="center"/>
             </LinearLayout>
         </android.support.v4.widget.NestedScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/red_ff"/>
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:text="我是标题"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="#FFFFFF"/>
     </e.user.rxjavatest.view.NestedScrollingLayout>
 
 

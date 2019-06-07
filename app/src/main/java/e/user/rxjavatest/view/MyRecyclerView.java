@@ -26,8 +26,6 @@ public class MyRecyclerView extends RecyclerView {
             if(isTouchPointInView(lastView.itemView, (int)ev.getRawX(),(int)ev.getRawY())){
                 //tabLayout区域事件不拦截滑动区域事件不拦截
                 return false;
-//            }else{
-//                return canScrollVertically(1);//isScrollTop(((ViewPageHolder)lastView).getScrollView());
             }
         }
         return super.onInterceptTouchEvent(ev);

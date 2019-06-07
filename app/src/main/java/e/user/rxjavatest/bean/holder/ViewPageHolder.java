@@ -1,5 +1,6 @@
 package e.user.rxjavatest.bean.holder;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
@@ -9,6 +10,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,13 +20,17 @@ import e.user.rxjavatest.R;
 import e.user.rxjavatest.adapter.BaseMultiAdapter;
 import e.user.rxjavatest.bean.PageBean;
 import e.user.rxjavatest.interfaces.MultiType;
+import e.user.rxjavatest.utils.LogUtils;
+import e.user.rxjavatest.view.HomePageTabLayout;
 
 public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
     private ViewPager viewPager;
-    private TabLayout tabLayout;
+    private HomePageTabLayout tabLayout;
     private List<Fragment> fragments = new ArrayList<>();
     private List<String> nameList = new ArrayList<>();
     private FragmentStatePagerAdapter statePagerAdapter;
+    private HomePageTabLayout.TabProvider tabProvider;
+    private boolean isTop;
 
     public ViewPageHolder(@NonNull View itemView, FragmentActivity activity) {
         super(itemView);
@@ -40,15 +46,29 @@ public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
             public int getCount() {
                 return fragments.size();
             }
-
-            @Nullable
-            @Override
-            public CharSequence getPageTitle(int position) {
-                return nameList.get(position);
-            }
         };
         viewPager.setAdapter(statePagerAdapter);
-        tabLayout.setupWithViewPager(viewPager);
+        tabProvider = new HomePageTabLayout.TabProvider() {
+            @Override
+            public HomePageTabLayout.Tab getTab(int position) {
+                HomePageTabLayout.Tab tab = new HomePageTabLayout.Tab();
+                tab.setName(nameList.get(position));
+                tab.setSubName(nameList.get(position)+"副");
+                return tab;
+            }
+
+            @Override
+            public void displayImage(Context context, ImageView imageView, HomePageTabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabClick(int position) {
+
+            }
+        };
+        tabLayout.setTabProvider(tabProvider);
+        tabLayout.setViewPager(viewPager);
     }
 
     @Override
@@ -62,6 +82,7 @@ public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
                 fragments.add(PageFragment.getInstance(nameList.get(i)));
             }
             statePagerAdapter.notifyDataSetChanged();
+            tabLayout.notifyDataSetChanged();
         }
     }
 
@@ -78,5 +99,11 @@ public class ViewPageHolder extends BaseMultiAdapter.BaseHolderView {
                     pageFragment.getRecyclerView().scrollToPosition(0);
             }
         }
+    }
+
+    public void changeTab(boolean isTop){
+        LogUtils.d("TabLayout isTop="+isTop);
+        if(isTop)tabLayout.toggleLightStyle();
+        else tabLayout.toggleDarkStyle();
     }
 }

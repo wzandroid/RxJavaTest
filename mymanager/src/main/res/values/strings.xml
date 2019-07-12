@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">MyManager</string>
+    <string name="banner">测试Banner</string>
+</resources>

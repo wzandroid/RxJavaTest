@@ -8,15 +8,11 @@ import android.support.v4.view.NestedScrollingParentHelper;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
-import android.view.animation.TranslateAnimation;
 import android.widget.RelativeLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 import e.user.rxjavatest.R;
-import e.user.rxjavatest.utils.LogUtils;
 
 public class NestedScrollingLayout extends RelativeLayout implements NestedScrollingParent2 {
     private static final String TAG = "StickyNavLayout";

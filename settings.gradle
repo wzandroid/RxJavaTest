@@ -1,1 +1,1 @@
-include ':app', ':mybehavior', ':snackbarutils', ':testnestedscroll'
+include ':app', ':mybehavior', ':snackbarutils', ':testnestedscroll', ':mymanager'

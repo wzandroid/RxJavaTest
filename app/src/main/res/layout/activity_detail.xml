@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <e.user.rxjavatest.view.NestedScrollingLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/image_view"
+        <e.user.rxjavatest.view.RCRelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="@dimen/size_256dp"
-            android:layout_marginTop="50dp"
-            android:background="@mipmap/head_test"/>
+            android:layout_height="wrap_content"
+            app:round_corner="15dp">
+
+            <ImageView
+                android:id="@+id/image_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_256dp"
+                android:layout_marginTop="50dp"
+                android:background="@mipmap/head_test"/>
+        </e.user.rxjavatest.view.RCRelativeLayout>
 
         <android.support.v4.widget.NestedScrollView
             android:id="@+id/nested_view"

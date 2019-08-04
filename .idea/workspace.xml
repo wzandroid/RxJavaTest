@@ -28,44 +28,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f6fb9f14-81eb-4025-ac25-c3d4510ab173" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/mymanager/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/mymanager.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/androidTest/java/com/example/mymanager/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/adapter/BaseAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/adapter/StringAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/helper/OrientationHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/manager/BannerLayoutManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/manager/LooperLayoutManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/ui/BannerActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/layout/item_tv.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/layout/layout_banner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymanager/src/test/java/com/example/mymanager/ExampleUnitTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/helper/RCAttrs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/helper/RCHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/RCRelativeLayout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/interfaces/RecyclerViewTouchListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/proguard-rules.pro" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/recyclertablayout.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/androidTest/java/e/user/recyclertablayout/ExampleInstrumentedTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/java/e/user/recyclertablayout/MainActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/java/e/user/recyclertablayout/RecyclerTabLayout.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/values/attrs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/values/colors.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/values/strings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/main/res/values/styles.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recyclertablayout/src/test/java/e/user/recyclertablayout/ExampleUnitTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
@@ -125,11 +123,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_android_support_viewpager_28_0_0_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__com_scwang_smartrefresh_SmartRefreshLayout_1_1_0_alpha_24_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_scwang_smartrefresh_SmartRefreshLayout_1_1_0_alpha_24_aar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava2_rxandroid_2_0_2_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__io_reactivex_rxjava2_rxandroid_2_0_2_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/NestedScrollingLayout.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/NestedScrollingLayout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mybehavior/mybehavior.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mybehavior/mybehavior.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymanager/mymanager.iml" beforeDir="false" afterPath="$PROJECT_DIR$/mymanager/mymanager.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/snackbarutils/snackbarutils.iml" beforeDir="false" afterPath="$PROJECT_DIR$/snackbarutils/snackbarutils.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testnestedscroll/testnestedscroll.iml" beforeDir="false" afterPath="$PROJECT_DIR$/testnestedscroll/testnestedscroll.iml" afterDir="false" />
@@ -155,10 +157,56 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/ui/BannerActivity.java">
+        <entry file="file://$PROJECT_DIR$/recyclertablayout/src/main/java/e/user/recyclertablayout/RecyclerTabLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="27" column="52" lean-forward="true" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+            <state relative-caret-position="-8606">
+              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+              <folding>
+                <element signature="e#1397#1398#0" expanded="true" />
+                <element signature="e#1432#1433#0" expanded="true" />
+                <element signature="e#1501#1502#0" expanded="true" />
+                <element signature="e#1540#1541#0" expanded="true" />
+                <element signature="e#1929#1930#0" expanded="true" />
+                <element signature="e#1982#1983#0" expanded="true" />
+                <element signature="e#5081#5082#0" expanded="true" />
+                <element signature="e#5128#5129#0" expanded="true" />
+                <element signature="e#5187#5188#0" expanded="true" />
+                <element signature="e#5237#5238#0" expanded="true" />
+                <element signature="e#8078#8320#0" expanded="true" />
+                <element signature="e#8319#8320#0" expanded="true" />
+                <element signature="e#13643#13644#0" expanded="true" />
+                <element signature="e#13676#13677#0" expanded="true" />
+                <element signature="e#16085#16086#0" expanded="true" />
+                <element signature="e#16129#16130#0" expanded="true" />
+                <element signature="e#16698#16699#0" expanded="true" />
+                <element signature="e#16744#16745#0" expanded="true" />
+                <element signature="e#16787#16788#0" expanded="true" />
+                <element signature="e#16828#16829#0" expanded="true" />
+                <element signature="e#17016#17017#0" expanded="true" />
+                <element signature="e#17065#17066#0" expanded="true" />
+                <element signature="e#17745#17746#0" expanded="true" />
+                <element signature="e#17785#17786#0" expanded="true" />
+                <element signature="e#17796#17828#0" expanded="true" />
+                <element signature="e#20083#20084#0" expanded="true" />
+                <element signature="e#20152#20153#0" expanded="true" />
+                <element signature="e#20966#20967#0" expanded="true" />
+                <element signature="e#21016#21017#0" expanded="true" />
+                <element signature="e#21071#21072#0" expanded="true" />
+                <element signature="e#21121#21122#0" expanded="true" />
+                <element signature="e#21890#22240#0" expanded="true" />
+                <element signature="e#22239#22240#0" expanded="true" />
+                <element signature="e#22358#22359#0" expanded="true" />
+                <element signature="e#22396#22397#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/helper/RCHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -167,99 +215,106 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/manager/BannerLayoutManager.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/RCRelativeLayout.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="150" column="65" selection-start-line="150" selection-start-column="65" selection-end-line="150" selection-end-column="65" />
+            <state relative-caret-position="145">
+              <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3258#3259#0" expanded="true" />
-                <element signature="e#3305#3306#0" expanded="true" />
-                <element signature="e#3355#3356#0" expanded="true" />
-                <element signature="e#3400#3401#0" expanded="true" />
-                <element signature="e#3911#3912#0" expanded="true" />
-                <element signature="e#3947#3948#0" expanded="true" />
-                <element signature="e#4922#4923#0" expanded="true" />
-                <element signature="e#4969#4970#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#928#929#0" expanded="true" />
+                <element signature="e#956#957#0" expanded="true" />
+                <element signature="e#1010#1011#0" expanded="true" />
+                <element signature="e#1038#1039#0" expanded="true" />
+                <element signature="e#3975#3976#0" expanded="true" />
+                <element signature="e#4016#4017#0" expanded="true" />
+                <element signature="e#4056#4057#0" expanded="true" />
+                <element signature="e#4097#4098#0" expanded="true" />
+                <element signature="e#4139#4140#0" expanded="true" />
+                <element signature="e#4180#4181#0" expanded="true" />
+                <element signature="e#4223#4224#0" expanded="true" />
+                <element signature="e#4264#4265#0" expanded="true" />
+                <element signature="e#4299#4300#0" expanded="true" />
+                <element signature="e#4344#4345#0" expanded="true" />
+                <element signature="e#4379#4380#0" expanded="true" />
+                <element signature="e#4424#4425#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/MainActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="249">
+              <caret line="244" column="61" selection-start-line="244" selection-start-column="61" selection-end-line="244" selection-end-column="61" />
+              <folding>
+                <element signature="method#rxJavaTest1#0;class#MainActivity#0" />
+                <element signature="method#rxJavaTest2#0;class#MainActivity#0" />
+                <element signature="method#rxJavaTest3#0;class#MainActivity#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/DetailAnimActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/14f86a8ed64176db9660344cb1cf5719/jars/classes.jar!/android/support/v7/widget/RecyclerView.class">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="976" column="39" lean-forward="true" selection-start-line="976" selection-start-column="39" selection-end-line="976" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/helper/OrientationHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
+            <state relative-caret-position="98">
+              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#11519#11520#0" expanded="true" />
-                <element signature="e#11584#11585#0" expanded="true" />
+                <element signature="e#652#671#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-175">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mymanager/src/main/res/layout/layout_banner.xml">
           <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/attrs.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+            <state relative-caret-position="167">
+              <caret line="21" column="32" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/adapter/StringAdapter.java">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/helper/RCAttrs.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="525">
+              <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/adapter/BaseAdapter.java">
+        <entry file="file://$PROJECT_DIR$/recyclertablayout/src/main/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="362">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/manager/LooperLayoutManager.java">
+        <entry file="file://$PROJECT_DIR$/recyclertablayout/src/main/res/values/attrs.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="237">
-              <caret line="63" selection-start-line="63" selection-end-line="63" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -269,10 +324,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="valueResourceFile" />
         <option value="layoutResourceFile" />
         <option value="layoutResourceFile_vertical" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -294,6 +349,7 @@
       <find>OrientationHelper</find>
       <find>mRealCount</find>
       <find>mCurrentPosition</find>
+      <find>mViewPager</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -302,16 +358,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/testnestedscroll/src/main/java/com/example/testnestedscroll/adapter/RecyclerPagerAdapter.java" />
-        <option value="$PROJECT_DIR$/testnestedscroll/src/main/java/com/example/testnestedscroll/adapter/DataAdapter.java" />
-        <option value="$PROJECT_DIR$/testnestedscroll/src/main/res/layout/activity_main.xml" />
-        <option value="$PROJECT_DIR$/testnestedscroll/src/main/res/values/style.xml" />
-        <option value="$PROJECT_DIR$/testnestedscroll/src/main/java/com/example/testnestedscroll/adapter/DragDetailFragmentPagerAdapter.java" />
-        <option value="$PROJECT_DIR$/testnestedscroll/src/main/java/com/example/testnestedscroll/ScrollAvtivity.java" />
-        <option value="$PROJECT_DIR$/testnestedscroll/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/testnestedscroll/src/main/res/layout/activity_scroll.xml" />
-        <option value="$PROJECT_DIR$/testnestedscroll/src/main/java/com/example/testnestedscroll/view/FragmentItem1.java" />
-        <option value="$PROJECT_DIR$/testnestedscroll/src/main/res/layout/item_list.xml" />
         <option value="$PROJECT_DIR$/testnestedscroll/src/main/java/com/example/testnestedscroll/adapter/SlideFragmentPagerAdapter.java" />
         <option value="$PROJECT_DIR$/testnestedscroll/src/main/java/com/example/testnestedscroll/ScrollActivity.java" />
         <option value="$PROJECT_DIR$/testnestedscroll/src/main/java/com/example/testnestedscroll/MainActivity.java" />
@@ -334,7 +380,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/DetailAnimActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/MyDetailParentView.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/NestedScrollingLayout.java" />
         <option value="$PROJECT_DIR$/settings.gradle" />
         <option value="$PROJECT_DIR$/mymanager/build.gradle" />
@@ -353,6 +398,17 @@
         <option value="$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/MainActivity.java" />
         <option value="$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/manager/BannerLayoutManager.java" />
         <option value="$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/ui/BannerActivity.java" />
+        <option value="$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/interfaces/RecyclerViewTouchListener.java" />
+        <option value="$PROJECT_DIR$/recyclertablayout/build.gradle" />
+        <option value="$PROJECT_DIR$/recyclertablayout/src/main/res/values/attrs.xml" />
+        <option value="$PROJECT_DIR$/recyclertablayout/src/main/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/recyclertablayout/src/main/java/e/user/recyclertablayout/RecyclerTabLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/RoundViewOutlineProvider.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/helper/RCAttrs.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/helper/RCHelper.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/RCRelativeLayout.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml" />
       </list>
     </option>
   </component>
@@ -366,6 +422,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -387,25 +445,14 @@
             <path>
               <item name="RxJavaTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="RxJavaTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="mymanager" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="RxJavaTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RxJavaTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="mymanager" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RxJavaTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RxJavaTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="mymanager" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RxJavaTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="RxJavaTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="mymanager" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
@@ -413,46 +460,26 @@
             <path>
               <item name="RxJavaTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="RxJavaTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="mymanager" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mymanager" type="462c0819:PsiDirectoryNode" />
+              <item name="rxjavatest" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RxJavaTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="RxJavaTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="mymanager" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mymanager" type="462c0819:PsiDirectoryNode" />
-              <item name="helper" type="462c0819:PsiDirectoryNode" />
+              <item name="rxjavatest" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="RxJavaTest" type="b2602c69:ProjectViewProjectNode" />
               <item name="RxJavaTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="mymanager" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mymanager" type="462c0819:PsiDirectoryNode" />
-              <item name="manager" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RxJavaTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RxJavaTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="mymanager" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mymanager" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RxJavaTest" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RxJavaTest" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="mymanager" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="app" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="res" type="462c0819:PsiDirectoryNode" />
@@ -461,8 +488,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -471,8 +496,9 @@
     <property name="DEBUGGABLE_PROCESS" value="com.example.mymanager" />
     <property name="DEBUGGER_ID" value="Auto" />
     <property name="SHOW_ALL_PROCESSES" value="false" />
+    <property name="android.recentlyUsedThemes" value="Theme.AppCompat.DayNight.NoActionBar" />
     <property name="android.sdk.path" value="$PROJECT_DIR$/../Library/Android/sdk" />
-    <property name="device.picker.selection" value="VBJDU18A22007121" />
+    <property name="device.picker.selection" value="Nexus_6P_API_28" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
@@ -499,7 +525,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.mymanager">
+  <component name="RunManager" selected="Android App.recyclertablayout">
     <configuration name="&lt;template&gt;" type="JUnit" default="true" selected="false">
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -670,6 +696,59 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="recyclertablayout" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
+      <module name="recyclertablayout" />
+      <option name="DEPLOY" value="true" />
+      <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
+      <option name="DEPLOY_AS_INSTANT" value="false" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
+      <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
+      <option name="DEBUGGER_TYPE" value="Auto" />
+      <Auto>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Auto>
+      <Hybrid>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Hybrid>
+      <Java />
+      <Native>
+        <option name="USE_JAVA_AWARE_DEBUGGER" value="false" />
+        <option name="SHOW_STATIC_VARS" value="true" />
+        <option name="WORKING_DIR" value="" />
+        <option name="TARGET_LOGGING_CHANNELS" value="lldb process:gdb-remote packets" />
+        <option name="SHOW_OPTIMIZED_WARNING" value="true" />
+      </Native>
+      <Profilers>
+        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_ENABLED" value="false" />
+        <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sample Java Methods" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method v="2">
+        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="testnestedscroll" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="testnestedscroll" />
       <option name="DEPLOY" value="true" />
@@ -742,6 +821,7 @@
       <item itemvalue="Android App.mybehavior" />
       <item itemvalue="Android App.testnestedscroll" />
       <item itemvalue="Android App.mymanager" />
+      <item itemvalue="Android App.recyclertablayout" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -758,10 +838,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18009768" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24878837" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Build Variants" order="3" side_tool="true" />
@@ -777,7 +857,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.3989796" />
+      <window_info anchor="bottom" id="Build" order="7" visible="true" weight="0.39863014" />
       <window_info anchor="bottom" id="Android Profiler" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Logcat" order="10" weight="0.33523375" />
@@ -787,7 +867,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="right" id="Preview" order="4" weight="0.32844934" />
+      <window_info active="true" anchor="right" id="Preview" order="4" visible="true" weight="0.3279483" />
       <window_info anchor="right" id="Device File Explorer" order="5" side_tool="true" />
       <window_info anchor="right" id="Gradle" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
@@ -886,78 +966,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/adapter/MultiAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="29" column="44" selection-start-line="29" selection-start-column="44" selection-end-line="29" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/InRecyclerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="121" column="7" selection-start-line="66" selection-start-column="14" selection-end-line="121" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_pager.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="43" lean-forward="true" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_recycler_viewpage_page.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="10" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/PageFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="47" column="30" selection-start-line="47" selection-start-column="30" selection-end-line="47" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/bean/PageBean.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/MyRecyclerView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="23" column="48" selection-start-line="23" selection-start-column="48" selection-end-line="23" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/92ef3befd23d22e94f89764f266507df/jars/classes.jar!/android/support/v4/view/ViewParentCompat.class" />
-    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/92ef3befd23d22e94f89764f266507df/jars/classes.jar!/android/support/v4/view/NestedScrollingParent.class" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/bean/holder/ViewPageHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/92ef3befd23d22e94f89764f266507df/jars/classes.jar!/android/support/v4/view/NestedScrollingParent2.class" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/MyTabLayout.java" />
-    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/009d961c9d11183ff245ceb27ab2def4/jars/classes.jar!/android/support/v4/view/NestedScrollingParent.class" />
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -978,30 +986,11 @@
       <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/009d961c9d11183ff245ceb27ab2def4/jars/classes.jar!/android/support/v4/widget/NestedScrollView.class" />
-    <entry file="file://$PROJECT_DIR$/../Library/Android/sdk/sources/android-28/android/view/View.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="24470" column="16" selection-start-line="24470" selection-start-column="16" selection-end-line="24470" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/009d961c9d11183ff245ceb27ab2def4/jars/classes.jar!/android/support/v4/view/NestedScrollingParentHelper.class" />
     <entry file="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.android.support/support-core-ui/27.1.1/266c369a3227be5afec33e11c964472269ff2a7c/support-core-ui-27.1.1-sources.jar!/android/support/design/widget/CoordinatorLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="1847" column="77" selection-start-line="1847" selection-start-column="34" selection-end-line="1847" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="241" column="72" selection-start-line="241" selection-start-column="72" selection-end-line="241" selection-end-column="72" />
-          <folding>
-            <element signature="method#rxJavaTest1#0;class#MainActivity#0" />
-            <element signature="method#rxJavaTest2#0;class#MainActivity#0" />
-            <element signature="method#rxJavaTest3#0;class#MainActivity#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1011,24 +1000,6 @@
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/DetailAnimActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="35" selection-start-line="11" selection-start-column="35" selection-end-line="11" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1061,13 +1032,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="29" column="54" selection-start-line="28" selection-start-column="4" selection-end-line="29" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mymanager/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="32" column="54" selection-start-line="32" selection-start-column="54" selection-end-line="32" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -1148,69 +1112,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mymanager/src/main/res/layout/layout_banner.xml">
+    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/helper/CenterSnapHelper.java" />
+    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/manager/LoopLayoutManager.java" />
+    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/manager/ViewPagerLayoutManager.java" />
+    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/helper/ScrollHelper.java" />
+    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/14f86a8ed64176db9660344cb1cf5719/jars/classes.jar!/android/support/v7/widget/RecyclerView.class" />
+    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/ui/BannerActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/adapter/StringAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/adapter/BaseAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/helper/CenterSnapHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2090">
-          <caret line="110" selection-start-line="110" selection-end-line="110" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/manager/LoopLayoutManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#179#180#0" expanded="true" />
-            <element signature="e#203#204#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/manager/LooperLayoutManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="63" selection-start-line="63" selection-end-line="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/manager/ViewPagerLayoutManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2528">
-          <caret line="441" column="13" lean-forward="true" selection-start-line="441" selection-start-column="13" selection-end-line="441" selection-end-column="13" />
+        <state relative-caret-position="233">
+          <caret line="27" column="54" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1219,7 +1129,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/helper/OrientationHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
+        <state relative-caret-position="1200">
           <caret line="85" column="58" selection-start-line="85" selection-start-column="58" selection-end-line="85" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1229,27 +1139,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/helper/ScrollHelper.java">
+    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="60">
+          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mymanager/src/main/res/layout/layout_banner.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="38" selection-start-line="6" selection-start-column="38" selection-end-line="6" selection-end-column="38" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/adapter/StringAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/adapter/BaseAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="150">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/ui/BannerActivity.java">
+    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/manager/LooperLayoutManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="27" column="52" lean-forward="true" selection-start-line="27" selection-start-column="52" selection-end-line="27" selection-end-column="52" />
+        <state relative-caret-position="810">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1258,28 +1186,211 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/manager/BannerLayoutManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="150" column="65" selection-start-line="150" selection-start-column="65" selection-end-line="150" selection-end-column="65" />
+        <state relative-caret-position="425">
+          <caret line="123" column="23" selection-start-line="123" selection-start-column="11" selection-end-line="123" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3258#3259#0" expanded="true" />
-            <element signature="e#3305#3306#0" expanded="true" />
-            <element signature="e#3355#3356#0" expanded="true" />
-            <element signature="e#3400#3401#0" expanded="true" />
-            <element signature="e#3911#3912#0" expanded="true" />
-            <element signature="e#3947#3948#0" expanded="true" />
-            <element signature="e#4922#4923#0" expanded="true" />
-            <element signature="e#4969#4970#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/14f86a8ed64176db9660344cb1cf5719/jars/classes.jar!/android/support/v7/widget/RecyclerView.class">
+    <entry file="file://$PROJECT_DIR$/mymanager/src/main/java/com/example/mymanager/interfaces/RecyclerViewTouchListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="976" column="39" lean-forward="true" selection-start-line="976" selection-start-column="39" selection-end-line="976" selection-end-column="39" />
+        <state relative-caret-position="237">
+          <caret line="21" column="52" selection-start-line="21" selection-start-column="52" selection-end-line="21" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recyclertablayout/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recyclertablayout/src/main/java/e/user/recyclertablayout/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mymanager/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="31" column="63" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recyclertablayout/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="31" column="63" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recyclertablayout/src/main/res/values/attrs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recyclertablayout/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Library/Android/sdk/sources/android-28/android/view/View.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="1808" column="33" selection-start-line="1808" selection-start-column="33" selection-end-line="1808" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Library/Android/sdk/sources/android-28/android/view/ViewOutlineProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="37" column="37" selection-start-line="37" selection-start-column="37" selection-end-line="37" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/RoundViewOutlineProvider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="65" selection-start-line="9" selection-start-column="46" selection-end-line="9" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recyclertablayout/src/main/java/e/user/recyclertablayout/RecyclerTabLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8606">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+          <folding>
+            <element signature="e#1397#1398#0" expanded="true" />
+            <element signature="e#1432#1433#0" expanded="true" />
+            <element signature="e#1501#1502#0" expanded="true" />
+            <element signature="e#1540#1541#0" expanded="true" />
+            <element signature="e#1929#1930#0" expanded="true" />
+            <element signature="e#1982#1983#0" expanded="true" />
+            <element signature="e#5081#5082#0" expanded="true" />
+            <element signature="e#5128#5129#0" expanded="true" />
+            <element signature="e#5187#5188#0" expanded="true" />
+            <element signature="e#5237#5238#0" expanded="true" />
+            <element signature="e#8078#8320#0" expanded="true" />
+            <element signature="e#8319#8320#0" expanded="true" />
+            <element signature="e#13643#13644#0" expanded="true" />
+            <element signature="e#13676#13677#0" expanded="true" />
+            <element signature="e#16085#16086#0" expanded="true" />
+            <element signature="e#16129#16130#0" expanded="true" />
+            <element signature="e#16698#16699#0" expanded="true" />
+            <element signature="e#16744#16745#0" expanded="true" />
+            <element signature="e#16787#16788#0" expanded="true" />
+            <element signature="e#16828#16829#0" expanded="true" />
+            <element signature="e#17016#17017#0" expanded="true" />
+            <element signature="e#17065#17066#0" expanded="true" />
+            <element signature="e#17745#17746#0" expanded="true" />
+            <element signature="e#17785#17786#0" expanded="true" />
+            <element signature="e#17796#17828#0" expanded="true" />
+            <element signature="e#20083#20084#0" expanded="true" />
+            <element signature="e#20152#20153#0" expanded="true" />
+            <element signature="e#20966#20967#0" expanded="true" />
+            <element signature="e#21016#21017#0" expanded="true" />
+            <element signature="e#21071#21072#0" expanded="true" />
+            <element signature="e#21121#21122#0" expanded="true" />
+            <element signature="e#21890#22240#0" expanded="true" />
+            <element signature="e#22239#22240#0" expanded="true" />
+            <element signature="e#22358#22359#0" expanded="true" />
+            <element signature="e#22396#22397#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/helper/RCAttrs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="244" column="61" selection-start-line="244" selection-start-column="61" selection-end-line="244" selection-end-column="61" />
+          <folding>
+            <element signature="method#rxJavaTest1#0;class#MainActivity#0" />
+            <element signature="method#rxJavaTest2#0;class#MainActivity#0" />
+            <element signature="method#rxJavaTest3#0;class#MainActivity#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/DetailAnimActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/view/RCRelativeLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#928#929#0" expanded="true" />
+            <element signature="e#956#957#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#3975#3976#0" expanded="true" />
+            <element signature="e#4016#4017#0" expanded="true" />
+            <element signature="e#4056#4057#0" expanded="true" />
+            <element signature="e#4097#4098#0" expanded="true" />
+            <element signature="e#4139#4140#0" expanded="true" />
+            <element signature="e#4180#4181#0" expanded="true" />
+            <element signature="e#4223#4224#0" expanded="true" />
+            <element signature="e#4264#4265#0" expanded="true" />
+            <element signature="e#4299#4300#0" expanded="true" />
+            <element signature="e#4344#4345#0" expanded="true" />
+            <element signature="e#4379#4380#0" expanded="true" />
+            <element signature="e#4424#4425#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/e/user/rxjavatest/helper/RCHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="51" column="42" selection-start-line="51" selection-start-column="42" selection-end-line="51" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/attrs.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="21" column="32" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_detail.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="98">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+          <folding>
+            <element signature="e#652#671#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
 </project>

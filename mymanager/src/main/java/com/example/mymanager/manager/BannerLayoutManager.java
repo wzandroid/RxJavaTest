@@ -4,16 +4,16 @@ package com.example.mymanager.manager;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSmoothScroller;
 import android.support.v7.widget.LinearSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
+import android.view.MotionEvent;
 import android.view.View;
 
 import java.lang.ref.WeakReference;
-
-import static android.support.v7.widget.RecyclerView.SCROLL_STATE_DRAGGING;
 
 public class BannerLayoutManager extends LinearLayoutManager {
     private static final String TAG = "BannerLayoutManager";
@@ -28,14 +28,9 @@ public class BannerLayoutManager extends LinearLayoutManager {
     private float mTimeSmooth = 150f;
 
     public BannerLayoutManager(Context context, RecyclerView recyclerView , int realCount) {
-        super(context);
-        this.mLinearSnapHelper = new LinearSnapHelper();
-        this.mRealCount = realCount;
-        this.mHandler = new TaskHandler(this);
-        this.mRecyclerView = recyclerView;
-        setOrientation(HORIZONTAL);
-        this.mOrientation = HORIZONTAL;
+        this(context,recyclerView,realCount,HORIZONTAL);
     }
+
     public BannerLayoutManager(Context context,RecyclerView recyclerView ,int realCount,int orientation) {
         super(context);
         this.mLinearSnapHelper = new LinearSnapHelper();
@@ -75,28 +70,29 @@ public class BannerLayoutManager extends LinearLayoutManager {
     }
 
 
-
-
     @Override
     public void onScrollStateChanged(int state) {
         super.onScrollStateChanged(state);
         if (state == RecyclerView.SCROLL_STATE_IDLE){//滑动停止
-            if ( mLinearSnapHelper != null) {
+            setMsg();
+        }
+    }
 
-                View view = mLinearSnapHelper.findSnapView(this);
-                mCurrentPosition = getPosition(view);
+    private void setMsg(){
+        if ( mLinearSnapHelper != null) {
 
-                if (mOnSelectedViewListener != null)mOnSelectedViewListener.onSelectedView(view,mCurrentPosition % mRealCount);
+            View view = mLinearSnapHelper.findSnapView(this);
+            if(view == null)return;
+            mCurrentPosition = getPosition(view);
 
-                mHandler.setSendMsg(true);
-                Message msg = Message.obtain();
-                mCurrentPosition++;
-                msg.what = mCurrentPosition;
-                mHandler.sendMessageDelayed(msg,mTimeDelayed);
+            if (mOnSelectedViewListener != null)mOnSelectedViewListener.onSelectedView(view,mCurrentPosition % mRealCount);
 
-            }
-        }else if (state == SCROLL_STATE_DRAGGING){//拖动
-            mHandler.setSendMsg(false);
+            mHandler.setSendMsg(true);
+            Message msg = Message.obtain();
+            mCurrentPosition++;
+            msg.what = mCurrentPosition;
+            mHandler.sendMessageDelayed(msg,mTimeDelayed);
+
         }
     }
 

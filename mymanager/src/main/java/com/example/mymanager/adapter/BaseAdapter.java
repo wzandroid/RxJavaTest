@@ -7,7 +7,7 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class BaseAdapter <T extends Object,H extends BaseAdapter.BaseHolder> extends RecyclerView.Adapter<H> {
+public abstract class BaseAdapter <T extends Object,H extends BaseAdapter.BaseHolder<T>> extends RecyclerView.Adapter<H> {
     private List<T> dataList;
 
     public void setDataList(List<T> dataList){
@@ -22,14 +22,23 @@ public abstract class BaseAdapter <T extends Object,H extends BaseAdapter.BaseHo
     }
 
     @Override
+    public void onBindViewHolder(@NonNull H h, int i) {
+        h.BindData(getDataList().get(i));
+    }
+
+    @Override
     public int getItemCount() {
         return getDataList().size();
     }
 
-    public static class BaseHolder extends RecyclerView.ViewHolder{
+    public static class BaseHolder<T> extends RecyclerView.ViewHolder{
 
         public BaseHolder(@NonNull View itemView) {
             super(itemView);
+        }
+
+        public void BindData(T bean){
+
         }
     }
 }

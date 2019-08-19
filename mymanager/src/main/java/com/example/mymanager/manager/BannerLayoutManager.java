@@ -53,7 +53,6 @@ public class BannerLayoutManager extends LinearLayoutManager {
         mLinearSnapHelper.attachToRecyclerView(view);
     }
 
-
     @Override
     public void smoothScrollToPosition(RecyclerView recyclerView, RecyclerView.State state, int position) {
         LinearSmoothScroller smoothScroller =

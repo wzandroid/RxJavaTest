@@ -1,32 +1,20 @@
 package com.example.mymanager.helper;
 
-import android.content.Context;
 import android.graphics.PointF;
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.LinearSmoothScroller;
 import android.support.v7.widget.PagerSnapHelper;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.mymanager.manager.BannerLayoutManager;
-import com.example.mymanager.manager.Layoutmameger;
-
 import java.lang.ref.WeakReference;
 
-/**
- * File description.
- *
- * @author 王震
- * @date 2019-08-16
- */
 public class BannerHelper {
     private HorizontalLayoutManager layoutManager;
     private boolean autoPlay;
@@ -43,7 +31,6 @@ public class BannerHelper {
             recyclerView.addOnScrollListener(scrollListener);
             recyclerView.addOnItemTouchListener(onItemTouchListener);
             recyclerView.setAdapter(adapter);
-            new BannerSnapHelper().attachToRecyclerView(recyclerView);
 
             taskHandler = new TaskHandler(layoutManager);
         }
@@ -116,11 +103,18 @@ public class BannerHelper {
     private static class HorizontalLayoutManager extends LinearLayoutManager /*implements RecyclerView.SmoothScroller.ScrollVectorProvider*/{
         private RecyclerView mRecyclerView;
         private BannerSelectCallback mSelectCallback;
+        private int currentIndex;
+        private int dragTotalX; //横向拖拽总距离
+        private BannerSnapHelper snapHelper;
 
 
         public HorizontalLayoutManager(RecyclerView recyclerView){
-            super(recyclerView.getContext(),LinearLayoutManager.HORIZONTAL,false);
+            super(recyclerView.getContext(), LinearLayoutManager.HORIZONTAL,false);
+            snapHelper = new BannerSnapHelper();
             mRecyclerView = recyclerView;
+            recyclerView.setLayoutManager(this);
+            snapHelper.attachToRecyclerView(recyclerView);
+
         }
 
         private void setBannerSelectCallback(BannerSelectCallback selectCallback){
@@ -147,6 +141,9 @@ public class BannerHelper {
         public int scrollHorizontallyBy(int dx, RecyclerView.Recycler recycler, RecyclerView.State state) {
             if(getItemCount()==1){
                 return super.scrollHorizontallyBy(dx,recycler,state);
+            }
+            if(isDragging){
+                dragTotalX = dragTotalX+dx;
             }
             fill(dx, recycler);
             offsetChildrenHorizontal(dx * -1);
@@ -252,29 +249,42 @@ public class BannerHelper {
         }
 
         public void showNext(){
-            Log.d("Wz","showNext = "+(findFirstVisibleItemPosition()+1)%getItemCount());
-            mRecyclerView.smoothScrollToPosition((findFirstVisibleItemPosition()+1)%getItemCount());
+            currentIndex = (findFirstVisibleItemPosition() + 1) % getItemCount();
+            mRecyclerView.smoothScrollToPosition(currentIndex);
         }
 
-        private void postSelectIndex(){
+        private void postSelectIndex(int index){
             if(mSelectCallback!=null){
-                mSelectCallback.onSelected(findFirstVisibleItemPosition(),getItemCount());
+                mSelectCallback.onSelected(index,getItemCount());
             }
         }
+
+        private void showSelect(){
+            if(isDragging){
+                postSelectIndex(snapHelper.getTargetPosition());
+            }else{
+                postSelectIndex(currentIndex);
+            }
+        }
+
+        private boolean isDragging;
 
         @Override
         public void onScrollStateChanged(int state) {
             super.onScrollStateChanged(state);
+
             switch (state){
                 case RecyclerView.SCROLL_STATE_IDLE:
                     //滚动停止时
-                    postSelectIndex();
                     break;
                 case RecyclerView.SCROLL_STATE_DRAGGING:
                     //拖拽滚动时
-                    postSelectIndex();
+                    isDragging = true;
                     break;
                 case RecyclerView.SCROLL_STATE_SETTLING:
+                    showSelect();
+                    isDragging = false;
+                    dragTotalX = 0;
                     break;
             }
         }
@@ -314,13 +324,17 @@ public class BannerHelper {
         }
 
         public void setSendMsg(){
-            Log.d("Wz","Handler sendMsg");
             sendEmptyMessageDelayed(MSG_PLAY,PLAY_DURATION);
         }
 
     }
 
     private static class BannerSnapHelper extends PagerSnapHelper {
+        private int targetPosition;
+
+        private int getTargetPosition(){
+            return targetPosition;
+        }
 
         @Override
         public int findTargetSnapPosition(RecyclerView.LayoutManager layoutManager, int velocityX, int velocityY) {
@@ -330,6 +344,7 @@ public class BannerHelper {
             }else{
                 position = super.findTargetSnapPosition(layoutManager, velocityX, velocityY);
             }
+            targetPosition = position;
             return position;
         }
     }

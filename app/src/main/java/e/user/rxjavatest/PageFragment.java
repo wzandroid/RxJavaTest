@@ -7,9 +7,12 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,8 +35,7 @@ public class PageFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_recycler,container,false);
-        return view;
+        return inflater.inflate(R.layout.fragment_recycler,container,false);
     }
 
     @Override
@@ -43,11 +45,29 @@ public class PageFragment extends Fragment {
     }
 
     private void initUI(View view) {
-        recyclerView = view.findViewById(R.id.recycler_view);
+        recyclerView = (RecyclerView) view;
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
         dataAdapter = new DataAdapter();
         recyclerView.setAdapter(dataAdapter);
         recyclerView.setFocusableInTouchMode(false);
+        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
+            @Override
+            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
+                super.onScrollStateChanged(recyclerView, newState);
+                if (newState == RecyclerView.SCROLL_STATE_IDLE) {
+                    Glide.with(getContext()).resumeRequests();//恢复Glide加载图片
+                }else {
+                    Glide.with(getContext()).pauseRequests();//禁止Glide加载图片
+                }
+                Log.d("TAG","pageFragment scrollState = "+newState);
+            }
+
+            @Override
+            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
+                super.onScrolled(recyclerView, dx, dy);
+                Log.d("TAG","pageFragment scrolled = "+dy);
+            }
+        });
         initData();
     }
 

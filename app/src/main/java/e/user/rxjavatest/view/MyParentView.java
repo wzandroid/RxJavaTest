@@ -30,12 +30,6 @@ public class MyParentView extends RelativeLayout implements NestedScrollingParen
     }
 
     @Override
-    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
-
-    }
-
-    @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
         recyclerView = findViewById(R.id.recycler_view);
@@ -65,17 +59,20 @@ public class MyParentView extends RelativeLayout implements NestedScrollingParen
 
     @Override
     public void onNestedScroll(@NonNull View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type) {
-        Log.d("TAG","parent==>onNestedScroll==>type="+type+",dyConsumed="+dyConsumed+",dyUnconsumed="+dyUnconsumed);
+        Log.d("TAG","onNestedScroll==>type="+type+",dyConsumed="+dyConsumed+",dyUnconsumed="+dyUnconsumed);
         ViewPageHolder holder = (ViewPageHolder) recyclerView.getLastViewHolder();
+        Log.d("TAG","target = "+target.getClass().getSimpleName()+",holder="+(holder==null));
         if(holder != null){
             holder.changeTab(recyclerView.canScrollVertically(1));
             if(dyUnconsumed != 0){
                 if(target instanceof MyRecyclerView){
+                    Log.d("TAG","内层滚动");
                     //如果外层有未消耗的滑动距离，那么交给内层recyclerView来滑动
                     holder.getScrollView().scrollBy(0,dyUnconsumed);
                     return;
                 }
                 if(target instanceof RecyclerView){
+                    Log.d("TAG","外层滚动");
                     recyclerView.scrollBy(0,dyUnconsumed);
                     if(holder != null){
                         holder.allScrollTop();
@@ -88,17 +85,16 @@ public class MyParentView extends RelativeLayout implements NestedScrollingParen
 
     @Override
     public void onNestedPreScroll(@NonNull View target, int dx, int dy, @Nullable int[] consumed, int type) {
-        Log.d("TAG","parent==>onNestedPreScroll");
+        Log.d("TAG","parent==>onNestedPreScroll dy="+dy+",type = "+type);
 
-        if(target instanceof RecyclerView){
-            if(target instanceof MyRecyclerView)return;
-            if(dy>0 && recyclerView.canScrollVertically(1)){//向下滚动时
-                //如果外层可以滚动，优先外层滚动
-                recyclerView.scrollBy(0,dy);
-                if(consumed == null) consumed = new int[2];
+        if(dy<0){
+            ViewPageHolder holder = (ViewPageHolder) recyclerView.getLastViewHolder();
+            if(holder !=null && holder.getScrollView().canScrollVertically(-1)){
+                holder.getScrollView().scrollBy(0,dy);
+                if(consumed == null) {
+                    consumed = new int[2];
+                }
                 consumed[1] = dy;
-            }else{//向上滚动时，
-
             }
         }
     }

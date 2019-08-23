@@ -4,15 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.widget.Toast;
 
 import com.example.mymanager.R;
 import com.example.mymanager.adapter.ImageAdapter;
 import com.example.mymanager.adapter.StringAdapter;
 import com.example.mymanager.helper.BannerHelper;
 import com.example.mymanager.manager.BannerLayoutManager;
-import com.example.mymanager.widget.RecyclerCoverFlow;
+import com.example.mymanager.widget.FlyBanner;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -22,10 +20,10 @@ public class BannerActivity extends AppCompatActivity {
     private StringAdapter stringAdapter;
     private ImageAdapter imageAdapter;
     private BannerHelper bannerHelper;
-    private String[] data = {"https://j-image.missfresh.cn/mis_img_20190814180023748.jpg?mryxw=750&mryxh=448"/*,
+    private String[] data = {/*"https://j-image.missfresh.cn/mis_img_20190814180023748.jpg?mryxw=750&mryxh=448",
             "https://j-image.missfresh.cn/mis_img_20190815180440114.jpg?mryxw=750&mryxh=448",
             "https://j-image.missfresh.cn/mis_img_20190815113214882.jpg?mryxw=750&mryxh=448",
-            "https://j-image.missfresh.cn/mis_img_20190801171559443.jpg?mryxw=750&mryxh=448"*/,
+            "https://j-image.missfresh.cn/mis_img_20190801171559443.jpg?mryxw=750&mryxh=448",*/
             "https://j-image.missfresh.cn/mis_img_20190814180023748.jpg?mryxw=750&mryxh=448",
             "https://j-image.missfresh.cn/mis_img_20190813201803851.jpg?mryxw=750&mryxh=448"};
 
@@ -49,9 +47,6 @@ public class BannerActivity extends AppCompatActivity {
         RecyclerView bannerView = findViewById(R.id.banner_view);
         imageAdapter = new ImageAdapter();
         bannerHelper = new BannerHelper(bannerView,imageAdapter);
-
-        RecyclerCoverFlow flowView = findViewById(R.id.flow_view);
-        flowView.setAdapter(stringAdapter);
     }
 
     private void initData(){
@@ -72,6 +67,10 @@ public class BannerActivity extends AppCompatActivity {
 //                Toast.makeText(BannerActivity.this,index+"/"+count,Toast.LENGTH_SHORT).show();
             }
         });
+
+
+        FlyBanner flyBanner = findViewById(R.id.flyBanner);
+        flyBanner.setImagesUrl(imageList);
     }
 
 

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <e.user.rxjavatest.view.HomePageTabLayout
-        android:id="@+id/tab_layout"
+    <e.user.rxjavatest.view.XTabLayout
+        android:id="@+id/x_tab_layout"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:focusable="true"
-        android:clickable="true"
-        app:hptv_text_bold="false"
-        app:hptv_text_normal_size="16sp"
-        app:hptv_text_selected_size="16sp"
-        app:hptv_animator_duration="200"
-        app:hptv_indicator_height="3dp"
-        app:hptv_indicator_width="21dp" />
+        android:layout_height="wrap_content"
+        app:x_tabMode="scrollable"
+        app:x_indicatorMarginTop="15dp"
+        app:x_tabIndicatorHeight="@dimen/margin_3"
+        app:x_tabIndicatorRoundRect="true"/>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/view_page"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"
+        android:paddingTop="10dp"
+        android:clipToPadding="false"
+        android:clipChildren="false"/>
+</RelativeLayout>

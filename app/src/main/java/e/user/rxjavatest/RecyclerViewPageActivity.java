@@ -12,8 +12,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import e.user.rxjavatest.adapter.MultiAdapter;
+import e.user.rxjavatest.bean.BannerBean;
+import e.user.rxjavatest.bean.HorizontalBean;
 import e.user.rxjavatest.bean.PageBean;
-import e.user.rxjavatest.bean.RecyclerBean;
 import e.user.rxjavatest.bean.TopBean;
 import e.user.rxjavatest.interfaces.MultiType;
 
@@ -38,10 +39,10 @@ public class RecyclerViewPageActivity extends AppCompatActivity {
 
     private void initData() {
         List<MultiType> tmpList = new ArrayList<>();
-        for(int i=0;i<5;i++){
-//            if(i==4) tmpList.add(new RecyclerBean());
-//            else
-                if(i==4) tmpList.add(new PageBean());
+        for(int i=0;i<7;i++){
+            if(i==0) tmpList.add(new BannerBean());
+            else if(i<4) tmpList.add(new HorizontalBean());
+            else if(i==6) tmpList.add(new PageBean());
             else tmpList.add(new TopBean("Test "+i));
         }
         multiAdapter.setDataList(tmpList);

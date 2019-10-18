@@ -45,9 +45,8 @@ public class MultiAdapter extends BaseMultiAdapter<MultiType, BaseMultiAdapter.B
 
     @Override
     protected BaseHolderView createHolder(View view, int type) {
+        BaseAdapter.BaseHolder holder;
         switch (type){
-            case TOP_TYPE:
-                return new TopHolder(view);
             case PAGE_TYPE:
                 return new ViewPageHolder(view,mActivity);
             case SCROLL_TYPE:

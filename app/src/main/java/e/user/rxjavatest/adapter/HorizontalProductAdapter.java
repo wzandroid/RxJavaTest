@@ -1,6 +1,7 @@
 package e.user.rxjavatest.adapter;
 
 import android.support.annotation.NonNull;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,8 +24,10 @@ public class HorizontalProductAdapter extends BaseAdapter<HorizontalProductBean,
     @NonNull
     @Override
     public ProductHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ProductHolder(LayoutInflater.from(parent.getContext()).
-                inflate(R.layout.item_horizontal_product,parent,false));
+        long time = System.currentTimeMillis();
+        ProductHolder holder = new ProductHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_horizontal_product,parent,false));
+        Log.d("Wz","横排货架 create holder "+(System.currentTimeMillis() - time));
+        return holder;
     }
 
     public class ProductHolder extends BaseAdapter.BaseHolder<HorizontalProductBean>{
@@ -33,8 +36,8 @@ public class HorizontalProductAdapter extends BaseAdapter<HorizontalProductBean,
 
         public ProductHolder(@NonNull View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.image_view);
-            nameTv = itemView.findViewById(R.id.name_tv);
+            imageView = itemView.findViewById(R.id.iv_product_image);
+            nameTv = itemView.findViewById(R.id.tv_product_name);
         }
 
         @Override

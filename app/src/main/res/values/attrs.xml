@@ -58,4 +58,11 @@
         <attr name="x_indicatorMarginTop" format="dimension" />
     </declare-styleable>
 
+    <declare-styleable name="MyTabView">
+        <attr name="tab_color" format="color"/>
+        <attr name="tab_size" format="dimension"/>
+        <attr name="tab_space" format="dimension"/>
+        <attr name="tab_padding_with" format="dimension"/>
+        <attr name="tab_padding_height" format="dimension"/>
+    </declare-styleable>
 </resources>

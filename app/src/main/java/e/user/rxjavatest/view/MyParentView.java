@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.view.NestedScrollingParent2;
 import android.support.v4.view.NestedScrollingParentHelper;
 import android.support.v4.view.ViewCompat;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -49,12 +50,6 @@ public class MyParentView extends RelativeLayout implements NestedScrollingParen
     @Override
     public void onStopNestedScroll(@NonNull View target, int type) {
         getParentHelper().onStopNestedScroll(target,type);
-        if(target instanceof MyRecyclerView){
-            ViewPageHolder holder = (ViewPageHolder) recyclerView.getLastViewHolder();
-            if(holder!=null) getParentHelper().onStopNestedScroll(holder.getScrollView());
-        }else{
-            getParentHelper().onStopNestedScroll(recyclerView);
-        }
     }
 
     @Override
@@ -65,19 +60,7 @@ public class MyParentView extends RelativeLayout implements NestedScrollingParen
         if(holder != null){
             holder.changeTab(recyclerView.canScrollVertically(1));
             if(dyUnconsumed != 0){
-                if(target instanceof MyRecyclerView){
-                    Log.d("TAG","内层滚动");
-                    //如果外层有未消耗的滑动距离，那么交给内层recyclerView来滑动
-                    holder.getScrollView().scrollBy(0,dyUnconsumed);
-                    return;
-                }
-                if(target instanceof RecyclerView){
-                    Log.d("TAG","外层滚动");
-                    recyclerView.scrollBy(0,dyUnconsumed);
-                    if(holder != null){
-                        holder.allScrollTop();
-                    }
-                }
+                holder.getScrollView().scrollBy(0,dyUnconsumed);
             }
         }
 
@@ -86,7 +69,7 @@ public class MyParentView extends RelativeLayout implements NestedScrollingParen
     @Override
     public void onNestedPreScroll(@NonNull View target, int dx, int dy, @Nullable int[] consumed, int type) {
         Log.d("TAG","parent==>onNestedPreScroll dy="+dy+",type = "+type);
-
+        Log.d("TAG","parent==>onNestedPreScroll dy="+dy+",type = "+type);
         if(dy<0){
             ViewPageHolder holder = (ViewPageHolder) recyclerView.getLastViewHolder();
             if(holder !=null && holder.getScrollView().canScrollVertically(-1)){

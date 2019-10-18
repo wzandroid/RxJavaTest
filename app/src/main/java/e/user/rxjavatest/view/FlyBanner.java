@@ -25,7 +25,6 @@ import java.util.List;
 public class FlyBanner extends RelativeLayout {
 
     private static final int RMP = LayoutParams.MATCH_PARENT;
-    private static final int RWP = LayoutParams.WRAP_CONTENT;
     private static final int WHAT_AUTO_PLAY = 1000;
 
     private ViewPager mViewPager;

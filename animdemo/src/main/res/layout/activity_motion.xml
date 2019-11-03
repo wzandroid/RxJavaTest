@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.motion.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layoutDescription="@xml/scene_01"
+    tools:showPaths="true">
+
+    <View
+        android:id="@+id/btn1"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@color/colorAccent"/>
+
+    <View
+        android:id="@+id/btn2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@color/colorPrimary"/>
+</android.support.constraint.motion.MotionLayout>

@@ -1,1 +1,1 @@
-include ':app', ':mybehavior', ':snackbarutils', ':testnestedscroll', ':mymanager', ':recyclertablayout'
+include ':app', ':mybehavior', ':snackbarutils', ':testnestedscroll', ':mymanager', ':recyclertablayout', ':animdemo'

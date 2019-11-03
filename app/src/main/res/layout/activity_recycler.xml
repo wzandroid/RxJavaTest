@@ -6,7 +6,6 @@
     android:layout_height="match_parent">
 
     <e.user.rxjavatest.view.MyParentView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:focusableInTouchMode="true"
@@ -18,9 +17,12 @@
             android:layout_height="match_parent"
             android:overScrollMode="never"/>
 
-        <!--<android.support.v7.widget.RecyclerView-->
-        <!--android:id="@+id/recycler_view"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"/>-->
+        <TextView
+            android:id="@+id/add_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="我是一个地址条"
+            android:textColor="@color/black_474245"/>
+
     </e.user.rxjavatest.view.MyParentView>
 </com.scwang.smartrefresh.layout.SmartRefreshLayout>

@@ -1,4 +1,4 @@
-package e.user.rxjavatest;
+package e.user.rxjavatest.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -11,11 +11,15 @@ import java.util.List;
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
+import e.user.rxjavatest.DetailAnimActivity;
+import e.user.rxjavatest.R;
+import e.user.rxjavatest.RecyclerViewPageActivity;
+import e.user.rxjavatest.TestRecyclerActivity;
 import e.user.rxjavatest.utils.LogUtils;
+import e.user.rxjavatest.view.MyTabView;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.Scheduler;
 import io.reactivex.Single;
 import io.reactivex.SingleSource;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn7).setOnClickListener(this);
         findViewById(R.id.btn8).setOnClickListener(this);
         findViewById(R.id.btn9).setOnClickListener(this);
+        findViewById(R.id.btn10).setOnClickListener(this);
     }
 
     //在非UI线程执行，不关注结果
@@ -239,10 +244,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 rxJavaTest7();
                 break;
             case R.id.btn8:
-                startActivity(new Intent(MainActivity.this,RecyclerViewPageActivity.class));
+                startActivity(new Intent(MainActivity.this, RecyclerViewPageActivity.class));
                 break;
             case R.id.btn9:
-                startActivity(new Intent(MainActivity.this,DetailAnimActivity.class));
+                startActivity(new Intent(MainActivity.this, DetailAnimActivity.class));
+                break;
+            case R.id.btn10:
+                startActivity(new Intent(MainActivity.this, MyViewActivity.class));
+                break;
+            default:
                 break;
         }
     }

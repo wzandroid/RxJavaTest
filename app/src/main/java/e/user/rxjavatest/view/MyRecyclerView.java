@@ -1,8 +1,12 @@
 package e.user.rxjavatest.view;
 
 import android.content.Context;
+import android.graphics.Canvas;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.support.v4.view.NestedScrollingParent2;
+import android.support.v4.view.NestedScrollingParentHelper;
+import android.support.v4.view.ViewCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
@@ -11,8 +15,10 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import e.user.rxjavatest.adapter.MultiAdapter;
+import e.user.rxjavatest.bean.holder.ViewPageHolder;
 
 public class MyRecyclerView extends RecyclerView {
+
     private static final int LAST_TYPE = MultiAdapter.PAGE_TYPE;
 
     public MyRecyclerView(@NonNull Context context, @Nullable AttributeSet attrs) {
@@ -20,52 +26,46 @@ public class MyRecyclerView extends RecyclerView {
     }
 
     @Override
-    public boolean onInterceptTouchEvent(MotionEvent ev) {
-        ViewHolder lastView = getLastViewHolder();
-        if(lastView != null ){
-            if(isTouchPointInView(lastView.itemView, (int)ev.getRawX(),(int)ev.getRawY())){
-                //tabLayout区域事件不拦截滑动区域事件不拦截
-                return false;
-            }
-        }
-        return super.onInterceptTouchEvent(ev);
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        Log.d("Wz","homeRecyclerView onSizeChanged");
     }
 
     @Override
-    public boolean dispatchNestedScroll(int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int[] offsetInWindow, int type) {
-        boolean isNestedScroll = super.dispatchNestedScroll(dxConsumed, dyConsumed, dxUnconsumed, dyUnconsumed, offsetInWindow, type);
-        if(dyUnconsumed>0 && canScrollVertically(1)){
-            Log.d("TAG","dyUnconsumed = " + dyUnconsumed+",canScrollVertically(i)="+canScrollVertically(1));
-        }
-        return isNestedScroll;
+    protected void onMeasure(int widthSpec, int heightSpec) {
+        super.onMeasure(widthSpec, heightSpec);
+        Log.d("Wz","homeRecyclerView onMeasure");
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        super.onLayout(changed, l, t, r, b);
+        Log.d("Wz","homeRecyclerView onLayout");
+    }
+
+    @Override
+    public void onDraw(Canvas c) {
+        super.onDraw(c);
+        Log.d("Wz","homeRecyclerView onDraw");
+    }
+
+    @Override
+    protected void dispatchDraw(Canvas canvas) {
+        super.dispatchDraw(canvas);
+        Log.d("Wz","homeRecyclerView dispatchDraw");
     }
 
     //获取列表最后一个可见的ViewHolder
     public ViewHolder getLastViewHolder(){
         LinearLayoutManager manager = (LinearLayoutManager) getLayoutManager();
-        if(manager!=null){
-            int posLast = manager.findLastVisibleItemPosition();
-            int posStart = manager.findFirstVisibleItemPosition();
-            ViewHolder holder = getChildViewHolder(getChildAt(posLast-posStart));
-            return holder.getItemViewType() == LAST_TYPE? holder:null;
+
+        if(manager!=null ) {
+            View view = manager.findViewByPosition(manager.getItemCount()-1);
+            if(view!=null){
+                ViewHolder holder = getChildViewHolder(view);
+                return holder.getItemViewType() == LAST_TYPE? holder:null;
+            }
         }
         return null;
-    }
-
-    private boolean isTouchPointInView(View view, int x, int y) {
-        if (view == null) {
-            return false;
-        }
-        int[] location = new int[2];
-        view.getLocationOnScreen(location);
-        int left = location[0];
-        int top = location[1];
-        int right = left + view.getMeasuredWidth();
-        int bottom = top + view.getMeasuredHeight();
-        if (y >= top && y <= bottom && x >= left
-                && x <= right) {
-            return true;
-        }
-        return false;
     }
 }

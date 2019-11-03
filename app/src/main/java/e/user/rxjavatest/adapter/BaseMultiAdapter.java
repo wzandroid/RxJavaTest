@@ -45,13 +45,19 @@ public abstract class BaseMultiAdapter<T extends MultiType,H extends BaseMultiAd
     @NonNull
     @Override
     public H onCreateViewHolder(@NonNull ViewGroup viewGroup, int type) {
+        long time = System.currentTimeMillis();
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(getHolderRes(type),viewGroup,false);
-        return createHolder(view,type);
+        H holder = createHolder(view,type);
+        Log.d("Wz",type + " holder create "+(System.currentTimeMillis() - time));
+        return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull H holder, int position) {
+        long time = System.currentTimeMillis();
+        int type = getDataList().get(position).getMultiType();
         holder.bindData(getDataList().get(position));
+        Log.d("Wz",type + " holder bind "+(System.currentTimeMillis() - time));
     }
 
     @Override

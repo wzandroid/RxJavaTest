@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.view.NestedScrollingParent2;
 import android.support.v4.view.NestedScrollingParentHelper;
 import android.support.v4.view.ViewCompat;
+import android.support.v4.widget.NestedScrollView;
 import android.support.v7.widget.RecyclerView;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -30,12 +31,6 @@ public class MyParentView extends RelativeLayout implements NestedScrollingParen
     }
 
     @Override
-    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
-        super.onSizeChanged(w, h, oldw, oldh);
-
-    }
-
-    @Override
     protected void onFinishInflate() {
         super.onFinishInflate();
         recyclerView = findViewById(R.id.recycler_view);
@@ -55,32 +50,17 @@ public class MyParentView extends RelativeLayout implements NestedScrollingParen
     @Override
     public void onStopNestedScroll(@NonNull View target, int type) {
         getParentHelper().onStopNestedScroll(target,type);
-        if(target instanceof MyRecyclerView){
-            ViewPageHolder holder = (ViewPageHolder) recyclerView.getLastViewHolder();
-            if(holder!=null) getParentHelper().onStopNestedScroll(holder.getScrollView());
-        }else{
-            getParentHelper().onStopNestedScroll(recyclerView);
-        }
     }
 
     @Override
     public void onNestedScroll(@NonNull View target, int dxConsumed, int dyConsumed, int dxUnconsumed, int dyUnconsumed, int type) {
-        Log.d("TAG","parent==>onNestedScroll==>type="+type+",dyConsumed="+dyConsumed+",dyUnconsumed="+dyUnconsumed);
+        Log.d("TAG","onNestedScroll==>type="+type+",dyConsumed="+dyConsumed+",dyUnconsumed="+dyUnconsumed);
         ViewPageHolder holder = (ViewPageHolder) recyclerView.getLastViewHolder();
+        Log.d("TAG","target = "+target.getClass().getSimpleName()+",holder="+(holder==null));
         if(holder != null){
             holder.changeTab(recyclerView.canScrollVertically(1));
             if(dyUnconsumed != 0){
-                if(target instanceof MyRecyclerView){
-                    //如果外层有未消耗的滑动距离，那么交给内层recyclerView来滑动
-                    holder.getScrollView().scrollBy(0,dyUnconsumed);
-                    return;
-                }
-                if(target instanceof RecyclerView){
-                    recyclerView.scrollBy(0,dyUnconsumed);
-                    if(holder != null){
-                        holder.allScrollTop();
-                    }
-                }
+                holder.getScrollView().scrollBy(0,dyUnconsumed);
             }
         }
 
@@ -88,17 +68,16 @@ public class MyParentView extends RelativeLayout implements NestedScrollingParen
 
     @Override
     public void onNestedPreScroll(@NonNull View target, int dx, int dy, @Nullable int[] consumed, int type) {
-        Log.d("TAG","parent==>onNestedPreScroll");
-
-        if(target instanceof RecyclerView){
-            if(target instanceof MyRecyclerView)return;
-            if(dy>0 && recyclerView.canScrollVertically(1)){//向下滚动时
-                //如果外层可以滚动，优先外层滚动
-                recyclerView.scrollBy(0,dy);
-                if(consumed == null) consumed = new int[2];
+        Log.d("TAG","parent==>onNestedPreScroll dy="+dy+",type = "+type);
+        Log.d("TAG","parent==>onNestedPreScroll dy="+dy+",type = "+type);
+        if(dy<0){
+            ViewPageHolder holder = (ViewPageHolder) recyclerView.getLastViewHolder();
+            if(holder !=null && holder.getScrollView().canScrollVertically(-1)){
+                holder.getScrollView().scrollBy(0,dy);
+                if(consumed == null) {
+                    consumed = new int[2];
+                }
                 consumed[1] = dy;
-            }else{//向上滚动时，
-
             }
         }
     }

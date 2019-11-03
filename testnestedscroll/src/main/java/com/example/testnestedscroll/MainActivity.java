@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initUI();
         initData();
-        startActivity(new Intent(this,ScrollActivity.class));
+//        startActivity(new Intent(this,ScrollActivity.class));
     }
 
     private void initData() {

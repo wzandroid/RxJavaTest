@@ -1,6 +1,6 @@
 package e.user.rxjavatest.adapter;
 
-import android.support.v4.app.FragmentActivity;
+import androidx.fragment.app.FragmentActivity;
 import android.view.View;
 
 import e.user.rxjavatest.R;

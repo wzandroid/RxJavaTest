@@ -1,20 +1,15 @@
 package e.user.mybehavior;
 
 import android.content.Intent;
-import android.support.annotation.Nullable;
-import android.support.design.button.MaterialButton;
-import android.support.design.card.MaterialCardView;
-import android.support.design.chip.Chip;
-import android.support.design.chip.ChipGroup;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+
+import com.google.android.material.card.MaterialCardView;
+import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button btn1;

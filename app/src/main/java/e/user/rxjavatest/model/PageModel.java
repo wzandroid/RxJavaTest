@@ -1,9 +1,8 @@
 package e.user.rxjavatest.model;
 
-import android.arch.lifecycle.MutableLiveData;
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.MutableLiveData;
+import androidx.lifecycle.ViewModel;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import e.user.rxjavatest.interfaces.MultiType;

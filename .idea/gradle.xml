@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
-        <compositeConfiguration>
-          <compositeBuild compositeDefinitionSource="SCRIPT" />
-        </compositeConfiguration>
+        <option name="delegatedBuild" value="false" />
+        <option name="testRunner" value="PLATFORM" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/animdemo" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/imageswitch" />
             <option value="$PROJECT_DIR$/mybehavior" />
+            <option value="$PROJECT_DIR$/mymanager" />
+            <option value="$PROJECT_DIR$/recyclertablayout" />
             <option value="$PROJECT_DIR$/snackbarutils" />
+            <option value="$PROJECT_DIR$/testnestedscroll" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

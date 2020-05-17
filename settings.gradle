@@ -1,1 +1,2 @@
 include ':app', ':mybehavior', ':snackbarutils', ':testnestedscroll', ':mymanager', ':recyclertablayout', ':animdemo'
+include ':imageswitch'

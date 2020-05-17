@@ -21,7 +21,7 @@
                 android:background="@mipmap/head_test"/>
         </e.user.rxjavatest.view.RCRelativeLayout>
 
-        <android.support.v4.widget.NestedScrollView
+        <androidx.core.widget.NestedScrollView
             android:id="@+id/nested_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -156,7 +156,7 @@
                     android:text="这个是测试数据啊22"
                     android:gravity="center"/>
             </LinearLayout>
-        </android.support.v4.widget.NestedScrollView>
+        </androidx.core.widget.NestedScrollView>
 
         <View
             android:layout_width="match_parent"

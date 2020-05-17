@@ -1,12 +1,11 @@
 package e.user.rxjavatest.bean.holder;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
 
 import e.user.rxjavatest.R;
 import e.user.rxjavatest.adapter.BaseMultiAdapter;

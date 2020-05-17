@@ -14,7 +14,7 @@
         app:x_tabIndicatorHeight="@dimen/margin_3"
         app:x_tabIndicatorRoundRect="true"/>
 
-    <android.support.v4.view.ViewPager
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_page"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

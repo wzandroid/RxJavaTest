@@ -1,7 +1,7 @@
 package e.user.rxjavatest.ui;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -14,9 +14,7 @@ import java.util.concurrent.TimeUnit;
 import e.user.rxjavatest.DetailAnimActivity;
 import e.user.rxjavatest.R;
 import e.user.rxjavatest.RecyclerViewPageActivity;
-import e.user.rxjavatest.TestRecyclerActivity;
 import e.user.rxjavatest.utils.LogUtils;
-import e.user.rxjavatest.view.MyTabView;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;

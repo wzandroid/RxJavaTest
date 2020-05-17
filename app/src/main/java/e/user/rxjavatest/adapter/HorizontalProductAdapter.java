@@ -1,6 +1,6 @@
 package e.user.rxjavatest.adapter;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;

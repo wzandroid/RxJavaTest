@@ -1,7 +1,7 @@
 package e.user.rxjavatest.adapter;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+
 import android.view.View;
 
 import e.user.rxjavatest.R;

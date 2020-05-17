@@ -1,9 +1,9 @@
 package e.user.rxjavatest;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,6 @@ import java.util.List;
 import e.user.rxjavatest.adapter.MultiAdapter;
 import e.user.rxjavatest.bean.BannerBean;
 import e.user.rxjavatest.bean.HorizontalBean;
-import e.user.rxjavatest.bean.PageBean;
 import e.user.rxjavatest.bean.TopBean;
 import e.user.rxjavatest.interfaces.MultiType;
 

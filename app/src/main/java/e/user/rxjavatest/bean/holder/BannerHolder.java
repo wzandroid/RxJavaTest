@@ -1,11 +1,7 @@
 package e.user.rxjavatest.bean.holder;
 
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 import android.view.View;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 
 import e.user.rxjavatest.R;
 import e.user.rxjavatest.adapter.MultiAdapter;

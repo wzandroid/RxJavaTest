@@ -1,8 +1,11 @@
 package com.example.imageswitch;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.drm.DrmStore;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.util.SparseArray;
@@ -14,11 +17,13 @@ import com.example.imageswitch.weight.ImageWatcher;
 import com.example.imageswitch.weight.ImageWatcherHelper;
 import com.example.imageswitch.weight.MessagePicturesLayout;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class MainActivity extends AppCompatActivity {
-    private MessagePicturesLayout picturesLayout;
+    private List<MessagePicturesLayout> picturesLayoutList = new ArrayList<>(9);
     private ImageWatcherHelper iwHelper;
     private String[] datas = {"https://t7.baidu.com/it/u=3616242789,1098670747&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1590312700&t=b678e23cbcea1d7f1bdad5a845e97703",
             "https://t8.baidu.com/it/u=1484500186,1503043093&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1590312700&t=c947f50c674f56dc5262802f72f25a63",
@@ -28,15 +33,27 @@ public class MainActivity extends AppCompatActivity {
             "https://t8.baidu.com/it/u=3064799386,2095288843&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1590312700&t=8fea8bd52df063ac3a14e95242dd9c93",
             "https://t7.baidu.com/it/u=2704272957,1194893808&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1590312700&t=ad73709d1359083b0e1b46d131076173",
             "https://t7.baidu.com/it/u=2336214222,3541748819&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1590312700&t=b7ac048b81106e3230467c5c27544be6",
-            "https://t9.baidu.com/it/u=2236363868,3488383685&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1590312700&t=557bba8337640704cc81cf9d75434a16"};
+            "https://t9.baidu.com/it/u=2236363868,3488383685&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1590312700&t=557bba8337640704cc81cf9d75434a16",
+            "https://t7.baidu.com/it/u=1031252820,601511851&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1590332286&t=a2e8c0c67373b74a970b562f6f330bd7"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Log.d("TAG","onCreate");
-        picturesLayout = findViewById(R.id.picture_layout);
-        picturesLayout.setCallback(layoutCallback);
+        picturesLayoutList.add((MessagePicturesLayout)findViewById(R.id.picture_layout1));
+        picturesLayoutList.add((MessagePicturesLayout)findViewById(R.id.picture_layout2));
+        picturesLayoutList.add((MessagePicturesLayout)findViewById(R.id.picture_layout3));
+        picturesLayoutList.add((MessagePicturesLayout)findViewById(R.id.picture_layout4));
+        picturesLayoutList.add((MessagePicturesLayout)findViewById(R.id.picture_layout5));
+        picturesLayoutList.add((MessagePicturesLayout)findViewById(R.id.picture_layout6));
+        picturesLayoutList.add((MessagePicturesLayout)findViewById(R.id.picture_layout7));
+        picturesLayoutList.add((MessagePicturesLayout)findViewById(R.id.picture_layout8));
+        picturesLayoutList.add((MessagePicturesLayout)findViewById(R.id.picture_layout9));
+        picturesLayoutList.add((MessagePicturesLayout)findViewById(R.id.picture_layout10));
+        for(int i =0;i<picturesLayoutList.size();i++){
+            picturesLayoutList.get(i).setCallback(layoutCallback);
+        }
         initImage();
         initData();
     }
@@ -73,6 +90,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initData(){
-        picturesLayout.setData(Arrays.asList(datas));
+        for(int i=0;i<picturesLayoutList.size();i++){
+            picturesLayoutList.get(i).setData(Arrays.asList(datas).subList(0,i+1));
+        }
     }
 }

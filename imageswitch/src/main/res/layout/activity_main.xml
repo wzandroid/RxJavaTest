@@ -1,16 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.example.imageswitch.weight.MessagePicturesLayout
-        android:id="@+id/picture_layout"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.example.imageswitch.weight.MessagePicturesLayout
+            android:id="@+id/picture_layout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.imageswitch.weight.MessagePicturesLayout
+            android:id="@+id/picture_layout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.imageswitch.weight.MessagePicturesLayout
+            android:id="@+id/picture_layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.imageswitch.weight.MessagePicturesLayout
+            android:id="@+id/picture_layout4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.imageswitch.weight.MessagePicturesLayout
+            android:id="@+id/picture_layout5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.imageswitch.weight.MessagePicturesLayout
+            android:id="@+id/picture_layout6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.imageswitch.weight.MessagePicturesLayout
+            android:id="@+id/picture_layout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.imageswitch.weight.MessagePicturesLayout
+            android:id="@+id/picture_layout8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.imageswitch.weight.MessagePicturesLayout
+            android:id="@+id/picture_layout9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <com.example.imageswitch.weight.MessagePicturesLayout
+            android:id="@+id/picture_layout10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

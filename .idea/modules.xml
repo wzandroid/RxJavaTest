@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/RxJavaTest.iml" filepath="$PROJECT_DIR$/RxJavaTest.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/animdemo/RxJavaTest.animdemo.iml" filepath="$PROJECT_DIR$/.idea/modules/animdemo/RxJavaTest.animdemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RxJavaTest.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RxJavaTest.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/decoration/RxJavaTest.decoration.iml" filepath="$PROJECT_DIR$/.idea/modules/decoration/RxJavaTest.decoration.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/imageswitch/RxJavaTest.imageswitch.iml" filepath="$PROJECT_DIR$/.idea/modules/imageswitch/RxJavaTest.imageswitch.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybehavior/RxJavaTest.mybehavior.iml" filepath="$PROJECT_DIR$/.idea/modules/mybehavior/RxJavaTest.mybehavior.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/mymanager/RxJavaTest.mymanager.iml" filepath="$PROJECT_DIR$/.idea/modules/mymanager/RxJavaTest.mymanager.iml" />

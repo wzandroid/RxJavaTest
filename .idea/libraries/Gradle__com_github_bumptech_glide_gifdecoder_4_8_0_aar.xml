@@ -2,14 +2,15 @@
   <library name="Gradle: com.github.bumptech.glide:gifdecoder:4.8.0@aar">
     <ANNOTATIONS>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/c473dacdb47433e7a6871e2d236d9369/jetified-gifdecoder-4.8.0/annotations.zip!/" />
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/90b062df55b7a549e3a8b1b899948783/jetified-gifdecoder-4.8.0/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/d2db163bbc3ed197e948244666f1d1b7/jetified-gifdecoder-4.8.0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/c473dacdb47433e7a6871e2d236d9369/jetified-gifdecoder-4.8.0/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/c473dacdb47433e7a6871e2d236d9369/jetified-gifdecoder-4.8.0/res" />
       <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/90b062df55b7a549e3a8b1b899948783/jetified-gifdecoder-4.8.0/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/90b062df55b7a549e3a8b1b899948783/jetified-gifdecoder-4.8.0/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/90b062df55b7a549e3a8b1b899948783/jetified-gifdecoder-4.8.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/d2db163bbc3ed197e948244666f1d1b7/jetified-gifdecoder-4.8.0/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/d2db163bbc3ed197e948244666f1d1b7/jetified-gifdecoder-4.8.0/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-2/files-2.1/d2db163bbc3ed197e948244666f1d1b7/jetified-gifdecoder-4.8.0/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/gifdecoder/4.8.0/efaa5fafad842304486e8d5c6a77208b8531e25e/gifdecoder-4.8.0-javadoc.jar!/" />

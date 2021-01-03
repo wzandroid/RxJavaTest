@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/RxJavaTest.iml" filepath="$PROJECT_DIR$/RxJavaTest.iml" group="RxJavaTest" />
-      <module fileurl="file://$PROJECT_DIR$/animdemo/animdemo.iml" filepath="$PROJECT_DIR$/animdemo/animdemo.iml" group="RxJavaTest/animdemo" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="RxJavaTest/app" />
-      <module fileurl="file://$PROJECT_DIR$/imageswitch/imageswitch.iml" filepath="$PROJECT_DIR$/imageswitch/imageswitch.iml" group="RxJavaTest/imageswitch" />
-      <module fileurl="file://$PROJECT_DIR$/mybehavior/mybehavior.iml" filepath="$PROJECT_DIR$/mybehavior/mybehavior.iml" group="RxJavaTest/mybehavior" />
-      <module fileurl="file://$PROJECT_DIR$/mymanager/mymanager.iml" filepath="$PROJECT_DIR$/mymanager/mymanager.iml" group="RxJavaTest/mymanager" />
-      <module fileurl="file://$PROJECT_DIR$/recyclertablayout/recyclertablayout.iml" filepath="$PROJECT_DIR$/recyclertablayout/recyclertablayout.iml" group="RxJavaTest/recyclertablayout" />
-      <module fileurl="file://$PROJECT_DIR$/snackbarutils/snackbarutils.iml" filepath="$PROJECT_DIR$/snackbarutils/snackbarutils.iml" group="RxJavaTest/snackbarutils" />
-      <module fileurl="file://$PROJECT_DIR$/testnestedscroll/testnestedscroll.iml" filepath="$PROJECT_DIR$/testnestedscroll/testnestedscroll.iml" group="RxJavaTest/testnestedscroll" />
+      <module fileurl="file://$PROJECT_DIR$/RxJavaTest.iml" filepath="$PROJECT_DIR$/RxJavaTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/animdemo/RxJavaTest.animdemo.iml" filepath="$PROJECT_DIR$/.idea/modules/animdemo/RxJavaTest.animdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/RxJavaTest.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/RxJavaTest.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/imageswitch/RxJavaTest.imageswitch.iml" filepath="$PROJECT_DIR$/.idea/modules/imageswitch/RxJavaTest.imageswitch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mybehavior/RxJavaTest.mybehavior.iml" filepath="$PROJECT_DIR$/.idea/modules/mybehavior/RxJavaTest.mybehavior.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/mymanager/RxJavaTest.mymanager.iml" filepath="$PROJECT_DIR$/.idea/modules/mymanager/RxJavaTest.mymanager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/recyclertablayout/RxJavaTest.recyclertablayout.iml" filepath="$PROJECT_DIR$/.idea/modules/recyclertablayout/RxJavaTest.recyclertablayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/snackbarutils/RxJavaTest.snackbarutils.iml" filepath="$PROJECT_DIR$/.idea/modules/snackbarutils/RxJavaTest.snackbarutils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/testnestedscroll/RxJavaTest.testnestedscroll.iml" filepath="$PROJECT_DIR$/.idea/modules/testnestedscroll/RxJavaTest.testnestedscroll.iml" />
     </modules>
   </component>
 </project>
